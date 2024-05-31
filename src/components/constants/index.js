@@ -16,16 +16,16 @@ export const PROFILE = {
     {
       title: "Internships And Experience",
       lines: [
-        "Currently interning with Hebbrix in AI/ML",
-        "Ex-Intern: Frontend and UI/UX Developer at Artizence",
-        "Freelance client work delivered through real-world web projects",
+        "AI/ML Intern at Hebbrix working on LLM retrieval, embeddings, and API integrations",
+        "270+ LeetCode problems solved with a 1394 rating",
+        "Frontend/UI intern and freelance developer with shipped live projects",
       ],
     },
     {
       title: "Tech Stack And Current Interests",
       lines: [
         "Python, Scikit-learn, LangChain, LangGraph, React, TypeScript, Node.js, Express.js, MongoDB, Postgres, Tailwind, SQL",
-        "Current interests: agentic AI systems, retrieval pipelines, knowledge graphs, backend engineering, and full-stack product development",
+        "Focused on agentic AI, knowledge graph Q&A, predictive modeling, backend APIs, and full-stack products",
       ],
     },
   ],
