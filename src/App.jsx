@@ -1,5 +1,5 @@
 import {motion} from 'framer-motion';
-import About from './components/about';
+import About from './components/About';
 import Contact from './components/contact';
 import Hero from './components/Hero';
 import Navbar from './components/navbar';
