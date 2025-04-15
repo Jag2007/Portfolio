@@ -5,7 +5,7 @@ import profilePic from "../assets/profile.jpeg";
 const Hero = () => {
   return (
     <motion.div
-      className="border-b border-neutral-900 pb-4 lg:mb-35 mt-20"
+      className="border-b border-neutral-900 pb-4 lg:mb-35 mt-40"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
