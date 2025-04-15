@@ -3,19 +3,20 @@ import aboutImg from '../assets/about.png'
 import { ABOUT_TEXT } from './constants'
 const About = () => {
   return (
-    <div className='border-b border-neutral-900 pb-4'>
-        <h1 className='my-20 text-center text-4xl bg-gradient-to-b from-neutral-200 to-neutral-600 bg-clip-text text-transparent'>About
-        <span className='text-neutral-300 bg-gradient-to-b from-neutral-200 to-neutral-600 bg-clip-text text-transparent'> Me</span>
+    <div className='border-b border-neutral-900 pb-4 pt-10'>
+        <h1 className='my-20 text-center text-4xl bg-gradient-to-b from-neutral-200 to-neutral-600 bg-clip-text text-transparent font-bold'>About
+        <span className='text-neutral-300 bg-gradient-to-b from-neutral-200 to-neutral-600 bg-clip-text text-transparent '> Me</span>
         </h1>
         <div className='flex flex-wrap '>
             <div className='w-full lg:w-1/2 lg:p-8'>
                 <div className='flex items-center justify-center'>
-                    <img  className='rounded-2xl h-150' src={aboutImg} alt="about"/>
+                    <img  className='rounded-2xl h-140' src={aboutImg} alt="about"/>
                 </div>
             </div>
             <div className='w-full lg:w-1/2'>
                 <div className='flex jutify-center lg:justify-start'>
-                    <p className=' text-xl my-2 max-w-xl py-20 '>{ABOUT_TEXT}</p>
+                    <p className=' text-xl my-2 max-w-xl py-20 font-light
+                    tracking-tighter'>{ABOUT_TEXT}</p>
                 </div>
             </div>
         </div>
