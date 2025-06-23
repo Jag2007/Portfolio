@@ -1,6 +1,5 @@
-import { motion } from 'framer-motion';
-import logo from '../assets/jp.png';
-import { FaLinkedin, FaGithub, FaInstagram, FaTwitter } from 'react-icons/fa';
+import logo from "../assets/jp.png";
+import { FaLinkedin, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const Navbar = () => {
   return (
