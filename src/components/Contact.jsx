@@ -1,13 +1,13 @@
-import React from 'react'
-import { CONTACT } from './constants'
-import { FaLinkedin, FaInstagram } from 'react-icons/fa';
+import React from "react";
+import { CONTACT } from "./constants";
+import { FaLinkedin, FaInstagram } from "react-icons/fa";
 
 const Contact = () => {
   return (
-    <div className='border-b border-neutral-900 pb-20'>
-      <h1 className='my-10 text-center text-4xl'>Get In Touch</h1>
-      <div className='text-center tracking-lighter'>
-        <p className='my-4'>Phone: {CONTACT.phoneNo}</p>
+    <div className="border-b border-neutral-900 pb-20 pl-55">
+      <h1 className="my-10 text-center text-4xl">Get In Touch</h1>
+      <div className="text-center tracking-lighter">
+        <p className="my-4">Phone: {CONTACT.phoneNo}</p>
         <div className="flex justify-center gap-4 mb-4">
           <a
             href="https://www.linkedin.com/in/jagruthi-pulumati-087b69305/"
@@ -24,10 +24,12 @@ const Contact = () => {
             <FaInstagram className="text-4xl text-pink-500" />
           </a>
         </div>
-        <a href='#' className=''>Email: {CONTACT.email}</a>
+        <a href="#" className="">
+          Email: {CONTACT.email}
+        </a>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

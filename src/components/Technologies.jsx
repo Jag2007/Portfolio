@@ -12,7 +12,7 @@ import tailwindLogo from "../assets/tailwind-logo.png";
 
 const Technologies = () => {
   return (
-    <div className="border-b border-neutral-800 pb-24">
+    <div className="border-b border-neutral-800 pb-24 pl-55">
       <h1 className="my-20 text-center text-5xl font-bold tracking-tight bg-gradient-to-b from-neutral-200 to-neutral-600 bg-clip-text text-transparent">
         Tech Stacks
       </h1>
