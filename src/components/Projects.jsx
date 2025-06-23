@@ -2,22 +2,15 @@ import { PROJECTS } from "./constants";
 
 const Projects = () => {
   return (
-    <motion.div
-      className="border-b border-neutral-900 pb-16"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-    >
+    <div className="border-b border-neutral-900 pb-16">
       <h1 className="text-center text-4xl font-bold my-10 bg-gradient-to-b from-neutral-200 to-neutral-600 bg-clip-text text-transparent">
         Projects
       </h1>
       <div className="flex flex-col gap-16 items-center">
         {PROJECTS.map((project, index) => (
-          <motion.div
+          <div
             key={index}
-            className="flex flex-col lg:flex-row items-center gap-8 w-full max-w-5xl px-4"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
+            className="flex flex-col lg:flex-row items-center gap-8 w-full max-w-5xl px-4 hover:scale-105 transition-transform duration-300"
           >
             <img
               src={project.image}
@@ -46,10 +39,10 @@ const Projects = () => {
                 </a>
               </div>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
-    </motion.div>
+    </div>
   );
 };
 

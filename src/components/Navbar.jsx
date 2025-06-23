@@ -3,44 +3,43 @@ import { FaLinkedin, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const Navbar = () => {
   return (
-    <motion.nav
-      className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-8 py-4 text-white backdrop-blur-md"
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5 }}
-    >
-      <img src={logo} alt="logo" className="mx-2 w-10" />
+    <nav className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-8 py-4 text-white backdrop-blur-md shadow-md">
+      <img src={logo} alt="logo" className="w-10" />
       <span className="flex gap-4 text-2xl">
-        <motion.a
-          whileHover={{ scale: 1.4 }}
-          whileTap={{ scale: 0.9 }}
-          className="text-white hover:text-transparent hover:gradient-to-r hover:from-purple-400 hover:to-purple-600 p-2 rounded-full transition-all duration-200"
+        <a
+          href="https://www.linkedin.com/in/jagruthi-pulumati-087b69305/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white hover:text-purple-400 transition-transform duration-300 transform hover:scale-125 p-2"
         >
           <FaLinkedin />
-        </motion.a>
-        <motion.a
-          whileHover={{ scale: 1.4 }}
-          whileTap={{ scale: 0.9 }}
-          className="text-white hover:text-transparent hover:gradient-to-r hover:from-purple-400 hover:to-purple-600 p-2 rounded-full transition-all duration-200"
+        </a>
+        <a
+          href="https://github.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white hover:text-purple-400 transition-transform duration-300 transform hover:scale-125 p-2"
         >
           <FaGithub />
-        </motion.a>
-        <motion.a
-          whileHover={{ scale: 1.4 }}
-          whileTap={{ scale: 0.9 }}
-          className="text-white hover:text-transparent hover:gradient-to-r hover:from-purple-400 hover:to-purple-600 p-2 rounded-full transition-all duration-200"
+        </a>
+        <a
+          href="https://www.instagram.com/jagruthi._16/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white hover:text-pink-400 transition-transform duration-300 transform hover:scale-125 p-2"
         >
           <FaInstagram />
-        </motion.a>
-        <motion.a
-          whileHover={{ scale: 1.4 }}
-          whileTap={{ scale: 0.9 }}
-          className="text-white hover:text-transparent hover:gradient-to-r hover:from-purple-400 hover:to-purple-600 p-2 rounded-full transition-all duration-200"
+        </a>
+        <a
+          href="https://twitter.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white hover:text-blue-400 transition-transform duration-300 transform hover:scale-125 p-2"
         >
           <FaTwitter />
-        </motion.a>
+        </a>
       </span>
-    </motion.nav>
+    </nav>
   );
 };
 

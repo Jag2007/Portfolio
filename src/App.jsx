@@ -7,13 +7,7 @@ import Technologies from "./components/Technologies";
 
 function App() {
   return (
-    <motion.div
-      className="relative min-h-screen w-full overflow-x-hidden text-neutral-300 antialiased selection:bg-cyan-300 selection:text-blue"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 1 }}
-    >
+    <div className="relative min-h-screen w-full overflow-x-hidden text-neutral-300 antialiased selection:bg-cyan-300 selection:text-blue">
       <div className="fixed inset-0 -z-10 h-full w-full bg-[radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]" />
       <Navbar />
       <Hero />
@@ -21,7 +15,7 @@ function App() {
       <Technologies />
       <Projects />
       <Contact />
-    </motion.div>
+    </div>
   );
 }
 
