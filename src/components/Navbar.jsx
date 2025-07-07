@@ -1,4 +1,6 @@
 import logo from "../assets/jp.png";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 const scrollToSection = (id) => {
   const section = document.getElementById(id);
@@ -9,9 +11,13 @@ const scrollToSection = (id) => {
   }
 };
 
+const NAV_LINKS = ["home", "about", "projects", "contact"];
+
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-14 py-4 bg-transparent backdrop-blur-lg shadow-lg">
+    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 md:px-14 py-4 bg-black/60 backdrop-blur-lg shadow-lg border-b border-white/10">
       {/* Logo */}
       <img
         src={logo}
@@ -20,21 +26,46 @@ const Navbar = () => {
         onClick={() => scrollToSection("home")}
       />
 
-      {/* Nav Links */}
-      <div className="flex gap-6">
-        {["home", "about", "projects", "contact"].map((section) => (
+      {/* Desktop Nav Links */}
+      <div className="hidden md:flex gap-6">
+        {NAV_LINKS.map((section) => (
           <button
             key={section}
             onClick={() => scrollToSection(section)}
             className="relative text-white font-light tracking-wide uppercase text-sm md:text-base border-none outline-none bg-transparent transition-all duration-300 group"
           >
             {section}
-
-            {/* Emerald hover underline */}
             <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-[#00c896] transition-all duration-300 group-hover:w-full"></span>
           </button>
         ))}
       </div>
+
+      {/* Hamburger Icon for Mobile */}
+      <button
+        className="md:hidden text-white p-2 rounded focus:outline-none focus:ring-2 focus:ring-[#00c896]"
+        onClick={() => setMenuOpen((open) => !open)}
+        aria-label={menuOpen ? "Close menu" : "Open menu"}
+      >
+        {menuOpen ? <X size={28} /> : <Menu size={28} />}
+      </button>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="fixed inset-0 z-40 bg-black/80 flex flex-col items-center justify-center gap-8 md:hidden animate-fade-in">
+          {NAV_LINKS.map((section) => (
+            <button
+              key={section}
+              onClick={() => {
+                scrollToSection(section);
+                setMenuOpen(false);
+              }}
+              className="text-white text-2xl font-semibold uppercase tracking-widest hover:text-[#00c896] transition"
+            >
+              {section}
+            </button>
+          ))}
+        </div>
+      )}
     </nav>
   );
 };

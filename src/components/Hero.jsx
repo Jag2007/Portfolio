@@ -221,24 +221,24 @@ function SocialIcon({ href, icon: Icon, label }) {
 
 export default function HeroSection() {
   return (
-    <section className="relative w-screen h-screen flex items-center justify-center overflow-hidden text-white bg-[#0d1117]">
+    <section className="relative w-full min-h-screen flex items-center justify-center overflow-x-hidden overflow-y-visible text-white bg-[#0d1117] pt-24 md:pt-32 pb-8">
       {/* Hexagon grid background */}
       <HexagonGrid />
 
       {/* Emerald glowing blur */}
-      <div className="absolute top-[35%] w-full h-72 bg-[#00c896] rounded-full blur-[160px] opacity-25 animate-pulse" />
+      <div className="absolute top-[35%] w-full h-40 md:h-72 bg-[#00c896] rounded-full blur-[100px] md:blur-[160px] opacity-25 animate-pulse" />
 
       {/* Floating ring effect */}
       <motion.div
-        className="absolute border border-[#00c896] rounded-full w-[400px] h-[400px] opacity-10"
+        className="absolute border border-[#00c896] rounded-full w-[200px] h-[200px] md:w-[400px] md:h-[400px] opacity-10"
         animate={{ rotate: 360 }}
         transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
       />
 
       {/* Main content */}
-      <div className="z-10 text-center px-4">
+      <div className="z-10 w-full max-w-2xl mx-auto text-center px-4 md:px-0">
         <motion.h1
-          className="text-4xl md:text-6xl font-extrabold text-white"
+          className="text-2xl xs:text-3xl sm:text-4xl md:text-6xl font-extrabold text-white break-words"
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -247,7 +247,7 @@ export default function HeroSection() {
         </motion.h1>
 
         <motion.p
-          className="mt-4 text-[#e8fff4] text-md md:text-lg"
+          className="mt-4 text-[#e8fff4] text-sm xs:text-base md:text-lg max-w-xl mx-auto"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
@@ -257,14 +257,14 @@ export default function HeroSection() {
         </motion.p>
 
         <motion.div
-          className="mt-2 w-24 h-1 mx-auto bg-[#00c896] rounded-full"
+          className="mt-2 w-16 md:w-24 h-1 mx-auto bg-[#00c896] rounded-full"
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ delay: 1, duration: 1 }}
         />
 
         {/* Social + Resume + Email */}
-        <div className="mt-6 flex justify-center gap-5">
+        <div className="mt-6 flex flex-wrap justify-center gap-4 md:gap-5">
           {SOCIALS.map((s, i) => (
             <SocialIcon key={i} {...s} />
           ))}
