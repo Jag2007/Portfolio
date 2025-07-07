@@ -3,7 +3,7 @@ import aboutImg from "../assets/about.png";
 import { ABOUT_TEXT } from "./constants";
 const About = () => {
   return (
-    <div className="border-b border-neutral-900 pb-4 pt-10 pl-55">
+    <div id="about" className="border-b border-neutral-900 pb-4 pt-10 pl-55">
       <h1 className="my-20 text-center text-4xl bg-gradient-to-b from-neutral-200 to-neutral-600 bg-clip-text text-transparent font-bold">
         About
         <span className="bg-gradient-to-b from-neutral-200 to-neutral-600 bg-clip-text text-transparent">

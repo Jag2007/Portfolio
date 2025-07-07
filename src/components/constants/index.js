@@ -10,11 +10,13 @@ I specialize in building responsive, modern web apps using React, HTML, CSS, and
 I’m passionate about creating user-first digital experiences that are both beautiful and efficient.
 Every line of code is a step closer to mastering my craft—and I’m just getting started.`;
 
-export const ABOUT_TEXT = `A aspiring software developer with a passion for crafting clean, responsive, and user-friendly web applications.
-Currently focused on mastering the front-end with technologies like React, HTML, CSS, and Tailwind CSS, always eager to learn and level up.
-What began as simple curiosity has turned into a drive to build meaningful digital experiences that blend design and functionality.
-Comfortable working in collaborative environments, always up for a challenge, and constantly exploring new ways to grow as a developer.
-Outside of coding, you'll find time spent discovering new tech, chilling with playlists or YouTube, and dreaming up the next big idea.`;
+export const ABOUT_TEXT = `Hi, I’m Jagruthi Pulumati — an 18-year-old aspiring software developer with a curious mind and a passion for clean, functional design. I specialize in building responsive, modern web applications using React, Next.js, Tailwind CSS, and JavaScript/TypeScript — turning ideas into beautiful, scalable experiences.
+
+With hands-on experience in live projects, I’ve worked on real-world applications that integrate APIs, handle dynamic data, and deliver seamless user interactions. I thrive at the intersection of creativity and logic, where smooth UI meets efficient code.
+
+Every line I write is a step toward mastering my craft — and I’m just getting started.
+
+`;
 
 
 export const PROJECTS = [
