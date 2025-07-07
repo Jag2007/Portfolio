@@ -7,8 +7,10 @@ import Technologies from "./components/Technologies";
 
 function App() {
   return (
-    <div className="relative min-h-screen w-full overflow-x-hidden text-neutral-300 antialiased selection:bg-cyan-300 selection:text-blue">
-      <div className="fixed inset-0 -z-10 h-full w-full bg-[radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]" />
+    <div className="relative min-h-screen w-screen overflow-x-hidden text-neutral-300 antialiased selection:bg-cyan-300 selection:text-blue">
+      {/* Full screen gradient background */}
+      <div className="fixed inset-0 -z-10 w-screen h-screen bg-gradient-to-br from-[#0f172a] via-[#0c1325] to-[#020617]" />
+
       <Navbar />
       <Hero />
       <About />

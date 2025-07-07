@@ -1,35 +1,73 @@
-import { HERO_CONTENT } from "./constants";
-import profilePic from "../assets/profile.jpeg";
+import { motion } from "framer-motion";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { BsFillFileEarmarkTextFill } from "react-icons/bs";
 
-const Hero = () => {
+export default function HeroSection() {
   return (
-    <div className="border-b border-neutral-900 pb-4 lg:mb-35 mt-40 pl-60">
-      <div className="flex flex-wrap">
-        <div className="w-full lg:w-1/2">
-          <div className="flex flex-col items-center lg:items-start">
-            <h1 className="pb-16 mt-20 ml-8 text-5xl lg:text-8xl font-thin tracking-tight bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-transparent">
-              Jagruthi Pulumati
-            </h1>
-            <span className="ml-8 text-2xl lg:text-3xl bg-gradient-to-r from-pink-200 via-slate-400 to-purple-100 bg-clip-text text-transparent tracking-tight">
-              Web Developer | Aspiring Coder | CS & AI Student
-            </span>
-            <p className="my-2 max-w-4xl py-6 font-light tracking-tighter ml-8 text-xl">
-              {HERO_CONTENT}
-            </p>
-          </div>
-        </div>
-        <div className="w-full lg:w-1/2 lg:p-12 rounded-2xl">
-          <div className="flex justify-center">
-            <img
-              className="rounded-2xl w-[300px] lg:w-[400px]"
-              src={profilePic}
-              alt="Jagruthi Pulumati"
-            />
-          </div>
+    <section className="relative w-screen h-screen flex items-center justify-center overflow-hidden text-white bg-[#0d1117]">
+      {/* Emerald glowing blur */}
+      <div className="absolute top-[35%] w-full h-72 bg-[#00c896] rounded-full blur-[160px] opacity-25 animate-pulse" />
+
+      {/* Floating ring effect */}
+      <motion.div
+        className="absolute border border-[#00c896] rounded-full w-[400px] h-[400px] opacity-10"
+        animate={{ rotate: 360 }}
+        transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+      />
+
+      {/* Main content */}
+      <div className="z-10 text-center px-4">
+        <motion.h1
+          className="text-4xl md:text-6xl font-extrabold text-white"
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          Jagruthi Pulumati
+        </motion.h1>
+
+        <motion.p
+          className="mt-4 text-[#e8fff4] text-md md:text-lg"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 1 }}
+        >
+          NST Student | Intern @Artizence | Freelance Web Developer | UI with
+          Vision | Code with Purpose
+        </motion.p>
+
+        <motion.div
+          className="mt-2 w-24 h-1 mx-auto bg-[#00c896] rounded-full"
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ delay: 1, duration: 1 }}
+        />
+
+        {/* Social Icons */}
+        <div className="mt-6 flex justify-center gap-5 text-[#00c896]">
+          <a
+            href="https://github.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub className="w-6 h-6 hover:text-white transition duration-300" />
+          </a>
+          <a
+            href="https://linkedin.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin className="w-6 h-6 hover:text-white transition duration-300" />
+          </a>
+          <a
+            href="https://instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaInstagram className="w-6 h-6 hover:text-white transition duration-300" />
+          </a>
         </div>
       </div>
-    </div>
+    </section>
   );
-};
-
-export default Hero;
+}
