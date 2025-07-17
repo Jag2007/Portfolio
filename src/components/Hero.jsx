@@ -192,8 +192,9 @@ const SOCIALS = [
   },
 ];
 
-function SocialIcon({ href, icon: Icon, label }) {
+function SocialIcon({ href, icon, label }) {
   const controls = useAnimation();
+  const Icon = icon;
   return (
     <motion.a
       href={href}
@@ -273,3 +274,5 @@ export default function HeroSection() {
     </section>
   );
 }
+
+export { HexagonGrid };

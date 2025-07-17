@@ -12,7 +12,7 @@ import { GiBrain } from "react-icons/gi";
 import tailwindLogo from "../assets/tailwind-logo.png";
 import { motion } from "framer-motion";
 
-// --- Hexagon and HexagonGrid from Hero.jsx ---
+// --- Hexagon Background ---
 function Hexagon({
   x,
   y,
@@ -68,13 +68,14 @@ function HexagonGrid() {
   const [pulseIdx, setPulseIdx] = useState([]);
 
   const hexes = useMemo(() => {
-    const w = typeof window !== "undefined" ? window.innerWidth : 1200;
-    const h = typeof window !== "undefined" ? window.innerHeight : 800;
+    const w = window.innerWidth;
+    const h = window.innerHeight;
     const hexWidth = size;
     const hexHeight = (Math.sqrt(3) / 2) * size;
     const cols = Math.ceil(w / (hexWidth * 0.75)) + 2;
     const rows = Math.ceil(h / hexHeight) + 2;
     const hexes = [];
+
     for (let row = 0; row < rows; row++) {
       for (let col = 0; col < cols; col++) {
         const x = col * hexWidth * 0.75;
@@ -87,10 +88,10 @@ function HexagonGrid() {
         hexes.push({ x, y, fade, scale, rotate });
       }
     }
+
     return hexes;
   }, [size]);
 
-  const [offset, setOffset] = useState(0);
   useMemo(() => {
     let frame;
     let t = 0;
@@ -99,17 +100,11 @@ function HexagonGrid() {
       setOffset(Math.sin(t) * 80);
       frame = requestAnimationFrame(animate);
     };
+    let setOffset = () => {};
+    setOffset = (offset) => setParallax((prev) => ({ ...prev, offset }));
     animate();
     return () => cancelAnimationFrame(frame);
   }, []);
-
-  function handleMouseMove(e) {
-    const w = window.innerWidth;
-    const h = window.innerHeight;
-    const x = (e.clientX / w - 0.5) * 100;
-    const y = (e.clientY / h - 0.5) * 100;
-    setParallax({ x, y });
-  }
 
   useMemo(() => {
     const interval = setInterval(() => {
@@ -122,17 +117,24 @@ function HexagonGrid() {
     return () => clearInterval(interval);
   }, [hexes.length]);
 
+  function handleMouseMove(e) {
+    const w = window.innerWidth;
+    const h = window.innerHeight;
+    const x = (e.clientX / w - 0.5) * 100;
+    const y = (e.clientY / h - 0.5) * 100;
+    setParallax({ x, y });
+  }
+
   return (
     <div
       className="absolute inset-0 w-full h-full z-0 pointer-events-none select-none"
-      style={{ overflow: "hidden" }}
       onMouseMove={handleMouseMove}
     >
       {hexes.map((hex, i) => (
         <Hexagon
           key={i}
-          x={hex.x + offset + parallax.x}
-          y={hex.y + offset + parallax.y}
+          x={hex.x + parallax.x}
+          y={hex.y + parallax.y}
           size={size}
           isHovered={hovered === i}
           onHover={() => setHovered(i)}
@@ -146,23 +148,24 @@ function HexagonGrid() {
     </div>
   );
 }
-// --- End HexagonGrid ---
+// --- End Hexagon Grid ---
 
 const Technologies = () => {
   return (
-    <section className="relative border-b border-neutral-800 pt-16 pb-24 px-4 sm:px-6 md:px-12 lg:px-24 xl:px-40 overflow-hidden">
-      {/* Hexagon grid background */}
+    <section className="relative w-screen py-20 px-4 md:px-16 bg-[#0d1117] overflow-hidden z-10">
+      {/* Hexagon Background */}
       <HexagonGrid />
 
-      {/* Emerald glowing blur */}
-      <div className="absolute top-[10%] w-full h-32 bg-[#00c896] rounded-full blur-[160px] opacity-25 animate-pulse" />
+      {/* Emerald Glow */}
+      <div className="absolute top-1/2 left-1/2 w-[480px] h-[480px] rounded-full blur-[160px] opacity-30 -translate-x-1/2 -translate-y-1/2 z-0" />
 
-      <h1 className="my-10 text-center text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-b from-neutral-200 to-white bg-clip-text text-transparent">
+      {/* Title */}
+      <h2 className="text-center text-3xl md:text-5xl font-bold text-white mb-10 z-10">
         Tech Stacks
-      </h1>
+      </h2>
 
-      <div className="flex flex-wrap justify-center gap-5 sm:gap-6 md:gap-8 px-4">
-        {/* Icon cards */}
+      {/* Tech Icons Grid */}
+      <div className="flex flex-wrap justify-center gap-6 z-10">
         <TechIcon
           icon={<RiReactjsLine />}
           border="border-cyan-400"
@@ -205,11 +208,7 @@ const Technologies = () => {
         />
         <TechIcon
           icon={
-            <img
-              src={tailwindLogo}
-              alt="Tailwind"
-              className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
-            />
+            <img src={tailwindLogo} alt="Tailwind CSS" className="w-10 h-10" />
           }
           border="border-sky-400"
         />
@@ -218,13 +217,13 @@ const Technologies = () => {
   );
 };
 
-// Reusable component
+// Reusable Tech Icon
 function TechIcon({ icon, border, text = "" }) {
   return (
     <div
-      className={`border-2 ${border} p-3 sm:p-4 rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-300`}
+      className={`border-2 ${border} p-4 rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-300`}
     >
-      <div className={`text-3xl sm:text-4xl md:text-5xl ${text}`}>{icon}</div>
+      <div className={`text-4xl md:text-5xl ${text}`}>{icon}</div>
     </div>
   );
 }

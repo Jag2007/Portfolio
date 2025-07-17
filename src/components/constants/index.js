@@ -3,7 +3,8 @@ import project2 from "../../assets/projects/project-2.png";
 import project3 from "../../assets/projects/project-3.png";
 import project4 from "../../assets/projects/project-4.png";
 import project5 from "../../assets/projects/project-5.png";
-export { project1, project2, project3, project4 ,project5};
+import project6 from "../../assets/projects/project-6.png";
+export { project1, project2, project3, project4 ,project5,project6};
 
 export const HERO_CONTENT = `Hi, I’m Jagruthi Pulumati — an 18-year-old aspiring software developer with a curious mind and a passion for clean, functional design. I specialize in building responsive, modern web applications using React, Next.js, Tailwind CSS, and JavaScript/TypeScript — turning ideas into beautiful, scalable experiences.
 
@@ -56,6 +57,13 @@ export const PROJECTS = [
     technologies: ["HTML", "CSS", "JavaScript"],
     projectlink:['https://tempconvor.netlify.app/']
   },
+  {
+    title: 'Nail Art Catalog Website',
+    description: "A visually aesthetic, categorized nail catalog showcasing multiple styles with pricing, built to enhance client engagement for a nail artist brand.",
+    image: project6,
+    technologies: ["React", "Tailwind CSS", "Framer Motion"],
+    projectlink: ['https://getnailedbyaish-catalog.vercel.app/']
+  }
 
 ];
 
