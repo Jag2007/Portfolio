@@ -42,16 +42,20 @@ const Navbar = () => {
 
       {/* Hamburger Icon for Mobile */}
       <button
-        className="md:hidden text-white p-2 rounded focus:outline-none focus:ring-2 focus:ring-[#00c896]"
+        className="md:hidden p-1"
         onClick={() => setMenuOpen((open) => !open)}
         aria-label={menuOpen ? "Close menu" : "Open menu"}
       >
-        {menuOpen ? <X size={28} /> : <Menu size={28} />}
+        {menuOpen ? (
+          <X className="w-6 h-6 text-white" />
+        ) : (
+          <Menu className="w-6 h-6 text-white" />
+        )}
       </button>
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="fixed inset-0 z-40 bg-black/80 flex flex-col items-center justify-center gap-8 md:hidden animate-fade-in">
+        <div className="absolute top-[68px] left-0 w-full bg-black/95 shadow-lg flex flex-col items-center gap-3 py-4 z-40 md:hidden transition-all duration-300 ease-in-out">
           {NAV_LINKS.map((section) => (
             <button
               key={section}
@@ -59,7 +63,7 @@ const Navbar = () => {
                 scrollToSection(section);
                 setMenuOpen(false);
               }}
-              className="text-white text-2xl font-semibold uppercase tracking-widest hover:text-[#00c896] transition"
+              className="text-white text-base font-semibold uppercase tracking-widest hover:text-[#00c896] transition-colors duration-200"
             >
               {section}
             </button>
