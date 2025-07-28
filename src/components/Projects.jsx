@@ -62,7 +62,7 @@ const Projects = () => {
               src={project.image}
               alt={project.title}
               className="w-full lg:w-1/2 rounded-xl shadow-lg object-cover"
-              style={{ boxShadow: "0 8px 32px 0 #00c89655" }}
+              style={{ boxShadow: "0 8px 16px 0 #00c89655" }}
             />
 
             {/* Project Text */}

@@ -73,10 +73,8 @@ function HexagonGrid() {
   const size = 115;
   const [hovered, setHovered] = useState(-1);
   const [parallax, setParallax] = useState({ x: 0, y: 0 });
-  // Pulse: randomly select a few hexagons to pulse every few seconds
   const [pulseIdx, setPulseIdx] = useState([]);
 
-  // Calculate number of hexagons needed to fill the screen
   const hexes = useMemo(() => {
     const w = typeof window !== "undefined" ? window.innerWidth : 1200;
     const h = typeof window !== "undefined" ? window.innerHeight : 800;
@@ -87,14 +85,11 @@ function HexagonGrid() {
     const hexes = [];
     for (let row = 0; row < rows; row++) {
       for (let col = 0; col < cols; col++) {
-        // Honeycomb offset
         const x = col * hexWidth * 0.75;
         const y = row * hexHeight + (col % 2 ? hexHeight / 2 : 0);
-        // Fade out as they move further from top-left
         const dist = Math.sqrt(x * x + y * y);
         const maxDist = Math.sqrt(w * w + h * h);
         const fade = Math.max(0, 1 - dist / maxDist);
-        // Animate scale and rotation
         const scale = 0.9 + 0.25 * Math.sin((row + col) * 0.5);
         const rotate = 8 * Math.sin((row - col) * 0.3);
         hexes.push({ x, y, fade, scale, rotate });
@@ -103,30 +98,27 @@ function HexagonGrid() {
     return hexes;
   }, [size]);
 
-  // Animate the grid gently from top-left to bottom-right
   const [offset, setOffset] = useState(0);
   useMemo(() => {
     let frame;
     let t = 0;
     const animate = () => {
-      t += 0.0015; // even slower, but more visible
-      setOffset(Math.sin(t) * 80); // larger amplitude
+      t += 0.0015;
+      setOffset(Math.sin(t) * 80);
       frame = requestAnimationFrame(animate);
     };
     animate();
     return () => cancelAnimationFrame(frame);
   }, []);
 
-  // Parallax effect
   function handleMouseMove(e) {
     const w = window.innerWidth;
     const h = window.innerHeight;
-    const x = (e.clientX / w - 0.5) * 100; // more pronounced
+    const x = (e.clientX / w - 0.5) * 100;
     const y = (e.clientY / h - 0.5) * 100;
     setParallax({ x, y });
   }
 
-  // Random pulse
   useMemo(() => {
     const interval = setInterval(() => {
       const count = Math.floor(Math.random() * 6) + 3;
@@ -186,7 +178,7 @@ const SOCIALS = [
     label: "Resume",
   },
   {
-    href: "jagruthi.pulumati2024@nst.rishihood.edu.in",
+    href: "mailto:jagruthi.pulumati2024@nst.rishihood.edu.in", // ✅ FIXED
     icon: Mail,
     label: "Email",
   },
@@ -220,6 +212,7 @@ function SocialIcon({ href, icon, label }) {
   );
 }
 
+// 4. Hero Section with everything
 export default function HeroSection() {
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center overflow-x-hidden overflow-y-visible text-white bg-[#0d1117] pt-24 md:pt-32 pb-8">
@@ -264,7 +257,6 @@ export default function HeroSection() {
           transition={{ delay: 1, duration: 1 }}
         />
 
-        {/* Social + Resume + Email */}
         <div className="mt-6 flex flex-wrap justify-center gap-4 md:gap-5">
           {SOCIALS.map((s, i) => (
             <SocialIcon key={i} {...s} />

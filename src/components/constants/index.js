@@ -4,7 +4,8 @@ import project3 from "../../assets/projects/project-3.png";
 import project4 from "../../assets/projects/project-4.png";
 import project5 from "../../assets/projects/project-5.png";
 import project6 from "../../assets/projects/project-6.png";
-export { project1, project2, project3, project4 ,project5,project6};
+import project7 from "../../assets/projects/project-7.png";
+export { project1, project2, project3, project4 ,project5,project6,project7};
 
 export const HERO_CONTENT = `Hi, I’m Jagruthi Pulumati — an 18-year-old aspiring software developer with a curious mind and a passion for clean, functional design. I specialize in building responsive, modern web applications using React, Next.js, Tailwind CSS, and JavaScript/TypeScript — turning ideas into beautiful, scalable experiences.
 
@@ -64,6 +65,14 @@ export const PROJECTS = [
     technologies: ["React", "Tailwind CSS", "Framer Motion"],
     projectlink: ['https://getnailedbyaish-catalog.vercel.app/']
   }
+  ,
+  {
+  title: 'Museek - Mood Based Music App',
+  description: "An interactive music discovery platform that curates recommendations based on user moods. Seamlessly blends emotions with playlists using sleek UI, mock APIs, and dynamic artist insights.",
+  image: project7, 
+  technologies: ["React", "Tailwind CSS", "Mock API", "Last.fm API"],
+  projectlink: ['https://museek-one.vercel.app/home']
+}
 
 ];
 
