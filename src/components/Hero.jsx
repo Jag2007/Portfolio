@@ -1,266 +1,94 @@
-import { motion, useAnimation } from "framer-motion";
-import { Github, Linkedin, Instagram, FileText, Mail } from "lucide-react";
-import { useState, useMemo, useRef } from "react";
+import { FileText, Github, Linkedin, Mail } from "lucide-react";
+import { PROFILE } from "./constants";
 
-// 1. Typewriter effect for name
-function Typewriter({ text, speed = 80, ...props }) {
-  const [displayed, setDisplayed] = useState("");
-  const i = useRef(0);
-  useMemo(() => {
-    setDisplayed("");
-    i.current = 0;
-    const interval = setInterval(() => {
-      setDisplayed(text.slice(0, i.current + 1));
-      i.current++;
-      if (i.current >= text.length) clearInterval(interval);
-    }, speed);
-    return () => clearInterval(interval);
-  }, [text, speed]);
-  return <span {...props}>{displayed}</span>;
-}
-
-// Hexagon SVG as a React component
-function Hexagon({
-  x,
-  y,
-  size,
-  isHovered,
-  onHover,
-  onLeave,
-  opacity,
-  scale,
-  rotate,
-  pulse,
-}) {
-  return (
-    <motion.svg
-      width={size}
-      height={size}
-      viewBox="0 0 100 100"
-      style={{ position: "absolute", left: x, top: y, pointerEvents: "auto" }}
-      onMouseEnter={onHover}
-      onMouseLeave={onLeave}
-      onTouchStart={onHover}
-      onTouchEnd={onLeave}
-      animate={{ scale: scale * (pulse ? 1.35 : 1), rotate }}
-      transition={{
-        duration: pulse ? 2.5 : 8,
-        repeat: Infinity,
-        repeatType: "reverse",
-        ease: "easeInOut",
-      }}
-    >
-      <polygon
-        points="50,10 90,30 90,70 50,90 10,70 10,30"
-        fill="none"
-        stroke={pulse ? "#00c896" : isHovered ? "#00c896" : "#fff"}
-        strokeWidth={pulse ? 3.5 : 0.5}
-        opacity={opacity}
-        style={{
-          filter:
-            isHovered || pulse
-              ? "drop-shadow(0 0 64px #00c896) drop-shadow(0 0 32px #00c896)"
-              : "none",
-          transition: "stroke 0.2s, filter 0.5s, stroke-width 0.5s",
-        }}
-      />
-    </motion.svg>
-  );
-}
-
-// 2. Parallax and random pulse for hexagons
 function HexagonGrid() {
-  const size = 115;
-  const [hovered, setHovered] = useState(-1);
-  const [parallax, setParallax] = useState({ x: 0, y: 0 });
-  const [pulseIdx, setPulseIdx] = useState([]);
-
-  const hexes = useMemo(() => {
-    const w = typeof window !== "undefined" ? window.innerWidth : 1200;
-    const h = typeof window !== "undefined" ? window.innerHeight : 800;
-    const hexWidth = size;
-    const hexHeight = (Math.sqrt(3) / 2) * size;
-    const cols = Math.ceil(w / (hexWidth * 0.75)) + 2;
-    const rows = Math.ceil(h / hexHeight) + 2;
-    const hexes = [];
-    for (let row = 0; row < rows; row++) {
-      for (let col = 0; col < cols; col++) {
-        const x = col * hexWidth * 0.75;
-        const y = row * hexHeight + (col % 2 ? hexHeight / 2 : 0);
-        const dist = Math.sqrt(x * x + y * y);
-        const maxDist = Math.sqrt(w * w + h * h);
-        const fade = Math.max(0, 1 - dist / maxDist);
-        const scale = 0.9 + 0.25 * Math.sin((row + col) * 0.5);
-        const rotate = 8 * Math.sin((row - col) * 0.3);
-        hexes.push({ x, y, fade, scale, rotate });
-      }
-    }
-    return hexes;
-  }, [size]);
-
-  const [offset, setOffset] = useState(0);
-  useMemo(() => {
-    let frame;
-    let t = 0;
-    const animate = () => {
-      t += 0.0015;
-      setOffset(Math.sin(t) * 80);
-      frame = requestAnimationFrame(animate);
-    };
-    animate();
-    return () => cancelAnimationFrame(frame);
-  }, []);
-
-  function handleMouseMove(e) {
-    const w = window.innerWidth;
-    const h = window.innerHeight;
-    const x = (e.clientX / w - 0.5) * 100;
-    const y = (e.clientY / h - 0.5) * 100;
-    setParallax({ x, y });
-  }
-
-  useMemo(() => {
-    const interval = setInterval(() => {
-      const count = Math.floor(Math.random() * 6) + 3;
-      const idxs = Array.from({ length: count }, () =>
-        Math.floor(Math.random() * hexes.length)
-      );
-      setPulseIdx(idxs);
-    }, 1800);
-    return () => clearInterval(interval);
-  }, [hexes.length]);
-
   return (
-    <div
-      className="absolute inset-0 w-full h-full z-0 pointer-events-none select-none"
-      style={{ overflow: "hidden" }}
-      onMouseMove={handleMouseMove}
-    >
-      {hexes.map((hex, i) => (
-        <Hexagon
-          key={i}
-          x={hex.x + offset + parallax.x}
-          y={hex.y + offset + parallax.y}
-          size={size}
-          isHovered={hovered === i}
-          onHover={() => setHovered(i)}
-          onLeave={() => setHovered(-1)}
-          opacity={0.12 * hex.fade}
-          scale={hex.scale}
-          rotate={hex.rotate}
-          pulse={pulseIdx.includes(i)}
-        />
-      ))}
+    <div className="pointer-events-none absolute inset-0 overflow-hidden opacity-60">
+      <div className="absolute left-[8%] top-24 h-32 w-32 rotate-12 rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur-sm" />
+      <div className="absolute right-[10%] top-36 h-24 w-24 rounded-[1.5rem] border border-[#7ef0c5]/30 bg-[#7ef0c5]/10" />
+      <div className="absolute left-[14%] bottom-24 h-40 w-40 rounded-full border border-[#f3c677]/20 bg-[#f3c677]/10 blur-3xl" />
+      <div className="absolute right-[18%] bottom-12 h-52 w-52 rounded-full border border-[#62b0ff]/20 bg-[#62b0ff]/10 blur-3xl" />
     </div>
   );
 }
 
-// 3. Social icon bounce and tooltip
-const SOCIALS = [
-  {
-    href: "https://github.com/Jag2007",
-    icon: Github,
-    label: "GitHub",
-  },
-  {
-    href: "https://www.linkedin.com/in/jagruthi-pulumati-087b69305/",
-    icon: Linkedin,
-    label: "LinkedIn",
-  },
-  {
-    href: "https://www.instagram.com/jagruthi._16/",
-    icon: Instagram,
-    label: "Instagram",
-  },
-  {
-    href: "https://pdf.ac/3I9eEF",
-    icon: FileText,
-    label: "Resume",
-  },
-  {
-    href: "mailto:jagruthi.pulumati2024@nst.rishihood.edu.in", // ✅ FIXED
-    icon: Mail,
-    label: "Email",
-  },
-];
+const SOCIAL_ICONS = {
+  github: Github,
+  linkedin: Linkedin,
+  resume: FileText,
+  email: Mail,
+};
 
 function SocialIcon({ href, icon, label }) {
-  const controls = useAnimation();
-  const Icon = icon;
+  const Icon = SOCIAL_ICONS[icon];
+
   return (
-    <motion.a
+    <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="relative text-white no-underline transition duration-300 rounded-full p-2 hover:bg-[#009e7a] hover:text-[#00c896]"
-      whileHover={{ scale: 1.25 }}
-      onHoverStart={() => controls.start({ y: -8 })}
-      onHoverEnd={() => controls.start({ y: 0 })}
-      style={{ display: "inline-block" }}
+      className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/6 px-4 py-2 text-sm text-white/88 transition hover:border-[#7ef0c5]/40 hover:bg-[#7ef0c5]/10"
     >
-      <Icon size={24} color="#fff" />
-      <motion.span
-        initial={{ opacity: 0, y: 8 }}
-        whileHover={{ opacity: 1, y: -24 }}
-        transition={{ duration: 0.3 }}
-        className="absolute left-1/2 -translate-x-1/2 -top-8 bg-[#222] text-xs px-2 py-1 rounded shadow pointer-events-none whitespace-nowrap"
-        style={{ color: "#00c896" }}
-      >
-        {label}
-      </motion.span>
-    </motion.a>
+      {Icon ? <Icon size={16} /> : null}
+      <span>{label}</span>
+    </a>
   );
 }
 
-// 4. Hero Section with everything
 export default function HeroSection() {
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center overflow-x-hidden overflow-y-visible text-white bg-[#0d1117] pt-24 md:pt-32 pb-8">
-      {/* Hexagon grid background */}
+    <section
+      id="home"
+      className="relative flex min-h-screen items-center overflow-hidden px-4 pb-16 pt-28 sm:px-6 md:px-12 lg:px-20"
+    >
       <HexagonGrid />
+      <div className="absolute inset-x-0 top-24 mx-auto h-64 w-[85%] rounded-full bg-[#5fc9a9]/18 blur-3xl" />
 
-      {/* Emerald glowing blur */}
-      <div className="absolute top-[35%] w-full h-40 md:h-72 bg-[#00c896] rounded-full blur-[100px] md:blur-[160px] opacity-25 animate-pulse" />
+      <div className="relative z-10 mx-auto grid w-full max-w-6xl gap-12 lg:grid-cols-[1.3fr_0.9fr] lg:items-center">
+        <div>
+          <p
+            className="mb-4 text-sm uppercase tracking-[0.35em] text-[#7ef0c5]"
+          >
+            Portfolio aligned to resume
+          </p>
 
-      {/* Floating ring effect */}
-      <motion.div
-        className="absolute border border-[#00c896] rounded-full w-[200px] h-[200px] md:w-[400px] md:h-[400px] opacity-10"
-        animate={{ rotate: 360 }}
-        transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-      />
+          <h1 className="display-font max-w-3xl text-5xl font-semibold leading-tight text-white sm:text-6xl md:text-7xl">
+            {PROFILE.name}
+          </h1>
 
-      {/* Main content */}
-      <div className="z-10 w-full max-w-2xl mx-auto text-center px-4 md:px-0">
-        <motion.h1
-          className="text-2xl xs:text-3xl sm:text-4xl md:text-6xl font-extrabold text-white break-words"
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          <Typewriter text="Jagruthi Pulumati" speed={70} />
-        </motion.h1>
+          <p
+            className="mt-6 max-w-2xl text-lg leading-8 text-white/72 sm:text-xl"
+          >
+            {PROFILE.role}
+          </p>
 
-        <motion.p
-          className="mt-4 text-[#e8fff4] text-sm xs:text-base md:text-lg max-w-xl mx-auto"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 1 }}
-        >
-          NST Student | Intern @Artizence | Freelance Web Developer | UI with
-          Vision | Code with Purpose
-        </motion.p>
+          <p
+            className="mt-4 max-w-2xl text-base leading-7 text-white/60 sm:text-lg"
+          >
+            {PROFILE.summary}
+          </p>
 
-        <motion.div
-          className="mt-2 w-16 md:w-24 h-1 mx-auto bg-[#00c896] rounded-full"
-          initial={{ scaleX: 0 }}
-          animate={{ scaleX: 1 }}
-          transition={{ delay: 1, duration: 1 }}
-        />
+          <div className="mt-8 flex flex-wrap gap-3">
+            {PROFILE.socials.map((item) => (
+              <SocialIcon key={item.label} {...item} />
+            ))}
+          </div>
+        </div>
 
-        <div className="mt-6 flex flex-wrap justify-center gap-4 md:gap-5">
-          {SOCIALS.map((s, i) => (
-            <SocialIcon key={i} {...s} />
-          ))}
+        <div className="rounded-[2rem] border border-white/10 bg-[#0f1720]/75 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.35)] backdrop-blur">
+          <p className="text-sm uppercase tracking-[0.28em] text-[#f3c677]">
+            Current snapshot
+          </p>
+          <div className="mt-6 space-y-4">
+            {PROFILE.headline.map((item) => (
+              <div
+                key={item}
+                className="rounded-2xl border border-white/8 bg-white/4 px-4 py-4 text-sm leading-6 text-white/78"
+              >
+                {item}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
