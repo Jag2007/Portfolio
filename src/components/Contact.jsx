@@ -1,4 +1,5 @@
 import { FileText, Github, Linkedin, Mail } from "lucide-react";
+import * as Motion from "framer-motion";
 import { PROFILE } from "./constants";
 
 const CONTACT_ICONS = {
@@ -11,8 +12,14 @@ const CONTACT_ICONS = {
 const Contact = () => {
   return (
     <section id="contact" className="px-4 py-16 sm:px-6 md:px-12 lg:px-20">
-      <div className="mx-auto max-w-6xl rounded-[2rem] border border-white/10 bg-[#0e151d]/88 p-8 shadow-[0_20px_50px_rgba(0,0,0,0.28)]">
-        <p className="text-sm uppercase tracking-[0.3em] text-[#7ef0c5]">
+      <Motion.motion.div
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.15 }}
+        transition={{ duration: 0.85 }}
+        className="mx-auto max-w-6xl rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02))] p-8 shadow-[0_20px_50px_rgba(0,0,0,0.28)]"
+      >
+        <p className="text-sm uppercase tracking-[0.3em] text-[#d7dde7]">
           Contact
         </p>
         <div className="mt-4 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
@@ -28,7 +35,7 @@ const Contact = () => {
           </div>
           <a
             href={`mailto:${PROFILE.email}`}
-            className="inline-flex items-center justify-center rounded-full bg-[#7ef0c5] px-6 py-3 text-sm font-semibold text-[#07110d] transition hover:scale-[1.02]"
+            className="inline-flex items-center justify-center rounded-full border border-white/12 bg-[linear-gradient(180deg,#f0f3f8,#bcc4cf)] px-6 py-3 text-sm font-semibold text-[#050608] transition hover:scale-[1.02]"
           >
             {PROFILE.email}
           </a>
@@ -44,7 +51,7 @@ const Contact = () => {
                 href={item.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-white/78 transition hover:border-[#f3c677]/30 hover:bg-[#f3c677]/10"
+                className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-white/78 transition hover:border-white/24 hover:bg-white/[0.09]"
               >
                 {Icon ? <Icon size={16} /> : null}
                 <span>{item.label}</span>
@@ -52,7 +59,7 @@ const Contact = () => {
             );
           })}
         </div>
-      </div>
+      </Motion.motion.div>
     </section>
   );
 };

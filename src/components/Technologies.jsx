@@ -1,16 +1,23 @@
+import * as Motion from "framer-motion";
 import { TECHNOLOGIES } from "./constants";
 
 const colorClasses = [
-  "border-[#7ef0c5]/25 bg-[#7ef0c5]/10 text-[#d4fff0]",
-  "border-[#f3c677]/25 bg-[#f3c677]/10 text-[#fff1cf]",
-  "border-[#62b0ff]/25 bg-[#62b0ff]/10 text-[#e4f1ff]",
+  "border-white/14 bg-white/[0.06] text-[#eff3f8]",
+  "border-[#a7afba]/20 bg-[#a7afba]/10 text-[#e3e8ef]",
+  "border-[#717987]/22 bg-[#717987]/10 text-[#cfd6e0]",
 ];
 
 const Technologies = () => {
   return (
     <section className="px-4 py-16 sm:px-6 md:px-12 lg:px-20">
-      <div className="mx-auto max-w-6xl rounded-[2rem] border border-white/10 bg-[#0e151d]/85 p-8 backdrop-blur">
-        <p className="text-sm uppercase tracking-[0.3em] text-[#7ef0c5]">
+      <Motion.motion.div
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.8 }}
+        className="mx-auto max-w-6xl rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02))] p-8 backdrop-blur"
+      >
+        <p className="text-sm uppercase tracking-[0.3em] text-[#d7dde7]">
           Tech Stack
         </p>
         <div className="mt-4 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
@@ -24,8 +31,9 @@ const Technologies = () => {
           </p>
         </div>
 
-        <div className="mt-8 rounded-[1.5rem] border border-[#7ef0c5]/20 bg-[#7ef0c5]/8 p-5">
-          <p className="text-xs uppercase tracking-[0.26em] text-[#7ef0c5]">
+        <div className="relative mt-8 overflow-hidden rounded-[1.5rem] border border-white/10 bg-[linear-gradient(120deg,rgba(255,255,255,0.08),rgba(255,255,255,0.02))] p-5">
+          <div className="metal-sheen pointer-events-none absolute inset-0" />
+          <p className="text-xs uppercase tracking-[0.26em] text-[#d7dde7]">
             Highlighted Stack
           </p>
           <p className="mt-3 text-base leading-8 text-white/78 sm:text-lg">
@@ -35,17 +43,19 @@ const Technologies = () => {
 
         <div className="mt-8 flex flex-wrap gap-3">
           {TECHNOLOGIES.map((tech, index) => (
-            <span
+            <Motion.motion.span
               key={tech}
+              whileHover={{ y: -4, scale: 1.03 }}
+              transition={{ type: "spring", stiffness: 260, damping: 18 }}
               className={`rounded-full border px-4 py-2 text-sm font-medium ${
                 colorClasses[index % colorClasses.length]
               }`}
             >
               {tech}
-            </span>
+            </Motion.motion.span>
           ))}
         </div>
-      </div>
+      </Motion.motion.div>
     </section>
   );
 };

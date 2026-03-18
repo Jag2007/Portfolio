@@ -14,10 +14,10 @@ const Navbar = () => {
 
   return (
     <nav className="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6 md:px-10">
-      <div className="mx-auto flex max-w-6xl items-center justify-between rounded-full border border-white/10 bg-[#0d141c]/80 px-5 py-3 shadow-[0_20px_40px_rgba(0,0,0,0.22)] backdrop-blur">
+      <div className="mx-auto flex max-w-6xl items-center justify-between rounded-full border border-white/10 bg-black/45 px-5 py-3 shadow-[0_20px_40px_rgba(0,0,0,0.35)] backdrop-blur-xl">
         <button
           onClick={() => scrollToSection("home")}
-          className="display-font text-sm font-semibold uppercase tracking-[0.35em] text-white"
+          className="display-font text-sm font-semibold uppercase tracking-[0.35em] text-white transition hover:text-[#e7ebf2]"
         >
           JP
         </button>
@@ -27,7 +27,7 @@ const Navbar = () => {
             <button
               key={section.id}
               onClick={() => scrollToSection(section.id)}
-              className="text-sm uppercase tracking-[0.22em] text-white/68 transition hover:text-[#7ef0c5]"
+              className="text-sm uppercase tracking-[0.22em] text-white/62 transition hover:text-[#edf1f7]"
             >
               {section.label}
             </button>
@@ -44,7 +44,7 @@ const Navbar = () => {
       </div>
 
       {menuOpen && (
-        <div className="mx-auto mt-3 max-w-6xl rounded-[1.5rem] border border-white/10 bg-[#0d141c]/95 p-4 shadow-[0_20px_40px_rgba(0,0,0,0.22)] backdrop-blur md:hidden">
+        <div className="mx-auto mt-3 max-w-6xl rounded-[1.5rem] border border-white/10 bg-[#090a0d]/95 p-4 shadow-[0_20px_40px_rgba(0,0,0,0.35)] backdrop-blur md:hidden">
           <div className="flex flex-col gap-3">
             {NAV_LINKS.map((section) => (
               <button
@@ -53,7 +53,7 @@ const Navbar = () => {
                   scrollToSection(section.id);
                   setMenuOpen(false);
                 }}
-                className="rounded-xl border border-white/8 px-4 py-3 text-left text-sm uppercase tracking-[0.2em] text-white/78"
+                className="rounded-xl border border-white/8 bg-white/[0.03] px-4 py-3 text-left text-sm uppercase tracking-[0.2em] text-white/78"
               >
                 {section.label}
               </button>

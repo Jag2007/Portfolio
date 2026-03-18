@@ -12,9 +12,9 @@ export const PROFILE = {
   summary:
     "I work across machine learning, full-stack applications, and backend fundamentals, while still caring a lot about how products feel in the hands of real users. My recent work spans ML prediction projects, data-driven health analysis, caption tooling, and web applications with clean interfaces.",
   headline: [
-    "Focused on AI/ML, full-stack development, and backend fundamentals",
-    "Frontend and UI/UX internship at Artizence",
-    "Hands-on projects across machine learning, product UI, and API-driven applications",
+    "Frontend and UI/UX Developer Intern at Artizence",
+    "Tech stack: React, JavaScript, Tailwind, SQL, Python, TensorFlow",
+    "Projects across ML prediction, health data analysis, caption tooling, and client websites",
   ],
   location: "India",
   email: "jagruthi.pulumati2024@nst.rishihood.edu.in",

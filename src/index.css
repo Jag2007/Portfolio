@@ -4,7 +4,7 @@
 :root {
   font-family: "IBM Plex Sans", sans-serif;
   color: rgba(255, 255, 255, 0.92);
-  background: #091018;
+  background: #050608;
 }
 
 .display-font {
@@ -19,7 +19,7 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background: #091018;
+  background: #050608;
 }
 
 #root {
@@ -41,4 +41,27 @@ button {
 img {
   display: block;
   max-width: 100%;
+}
+
+.metal-sheen {
+  background: linear-gradient(
+    120deg,
+    transparent 10%,
+    rgba(255, 255, 255, 0.03) 28%,
+    rgba(255, 255, 255, 0.17) 38%,
+    rgba(255, 255, 255, 0.04) 48%,
+    transparent 62%
+  );
+  transform: translateX(-120%);
+  animation: sheen 7.2s ease-in-out infinite;
+}
+
+@keyframes sheen {
+  0% {
+    transform: translateX(-120%);
+  }
+  45%,
+  100% {
+    transform: translateX(120%);
+  }
 }
