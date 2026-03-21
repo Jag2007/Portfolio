@@ -21,6 +21,16 @@ const snowflakes = Array.from({ length: 96 }, (_, index) => ({
   opacity: 0.18 + (index % 5) * 0.09,
 }));
 
+const glitterSpecks = Array.from({ length: 42 }, (_, index) => ({
+  id: index,
+  left: (index * 7.8) % 100,
+  top: (index * 11.7) % 100,
+  size: 1 + (index % 3) * 0.8,
+  duration: 3.6 + (index % 5) * 1.1,
+  delay: (index % 9) * 0.35,
+  opacity: 0.18 + (index % 4) * 0.08,
+}));
+
 export default function BackgroundFX() {
   return (
     <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
@@ -147,6 +157,31 @@ export default function BackgroundFX() {
               repeat: Infinity,
               delay: flake.delay,
               ease: "linear",
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="absolute inset-0">
+        {glitterSpecks.map((speck) => (
+          <Motion.motion.span
+            key={`glitter-${speck.id}`}
+            className="absolute rounded-full bg-[#CCD1D4] shadow-[0_0_12px_rgba(204,209,212,0.9)]"
+            style={{
+              left: `${speck.left}%`,
+              top: `${speck.top}%`,
+              width: `${speck.size}px`,
+              height: `${speck.size}px`,
+            }}
+            animate={{
+              opacity: [0.04, speck.opacity, 0.08],
+              scale: [0.9, 1.45, 0.95],
+            }}
+            transition={{
+              duration: speck.duration,
+              repeat: Infinity,
+              delay: speck.delay,
+              ease: "easeInOut",
             }}
           />
         ))}

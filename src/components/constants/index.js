@@ -11,10 +11,22 @@ export const PROFILE = {
   role: "AI/ML, full-stack, and backend-focused developer building practical products across web, data, and real-world client work.",
   summary:
     "I work across AI/ML, backend systems, and full-stack products, while still caring about clean user experience and polished interfaces. My recent work spans machine learning apps, data analytics, live client projects, and modern web platforms built with practical engineering in mind.",
-  headline: [
-    "Currently interning with Hebrix in AI/ML",
-    "Ex-Intern: Frontend and UI/UX Developer at Artizence",
-    "Freelance client work delivered through real-world web projects",
+  heroPanels: [
+    {
+      title: "Internships And Experience",
+      lines: [
+        "Currently interning with Hebrix in AI/ML",
+        "Ex-Intern: Frontend and UI/UX Developer at Artizence",
+        "Freelance client work delivered through real-world web projects",
+      ],
+    },
+    {
+      title: "Tech Stack And Current Interests",
+      lines: [
+        "React, JavaScript, TypeScript, Node.js, Express.js, MongoDB, Postgres, Tailwind, SQL, Python, Data Analytics, AI/ML",
+        "Current interests: AI/ML systems, backend engineering, full-stack product development, and real-world client platforms",
+      ],
+    },
   ],
   location: "India",
   email: "jagruthi.pulumati2024@nst.rishihood.edu.in",
@@ -148,7 +160,7 @@ export const PROJECTS = [
         icon: "external",
       },
       {
-        label: "Live Demo",
+        label: "Catalog Demo",
         href: "https://getnailedbyaish-catalog.vercel.app",
         icon: "external",
       },

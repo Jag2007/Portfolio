@@ -57,6 +57,10 @@ export default function HeroSection() {
       <div className="absolute left-[6%] top-24 h-40 w-40 rounded-full border border-white/8 bg-white/[0.02] blur-2xl" />
       <div className="absolute right-[8%] top-20 h-52 w-52 rounded-full bg-white/[0.035] blur-3xl" />
       <div className="absolute inset-x-0 top-[22%] mx-auto h-72 w-[76%] rounded-full bg-white/[0.04] blur-[140px]" />
+      <div className="absolute right-[8%] top-[18%] hidden h-[28rem] w-[32rem] rounded-full bg-[radial-gradient(circle_at_center,rgba(230,234,240,0.22),rgba(178,185,196,0.08),transparent_68%)] blur-3xl lg:block" />
+      <div className="absolute right-[16%] top-[26%] hidden h-3 w-3 rounded-full bg-white/80 shadow-[0_0_20px_rgba(255,255,255,0.95)] lg:block" />
+      <div className="absolute right-[28%] top-[18%] hidden h-2 w-2 rounded-full bg-white/70 shadow-[0_0_16px_rgba(255,255,255,0.85)] lg:block" />
+      <div className="absolute right-[10%] top-[48%] hidden h-2.5 w-2.5 rounded-full bg-white/65 shadow-[0_0_18px_rgba(255,255,255,0.85)] lg:block" />
 
       <div className="relative z-10 mx-auto grid w-full max-w-6xl gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
         <Motion.motion.div variants={container} initial="hidden" animate="show">
@@ -88,17 +92,30 @@ export default function HeroSection() {
           </Motion.motion.div>
         </Motion.motion.div>
 
-        <div className="grid gap-4 pt-24 lg:pt-40">
-          {PROFILE.headline.map((item, index) => (
+        <div className="grid gap-6 pt-12 lg:pt-24">
+          {PROFILE.heroPanels.map((panel, index) => (
             <Motion.motion.div
-              key={item}
+              key={panel.title}
               initial={{ opacity: 0, x: 28 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.32 + index * 0.12, duration: 0.7 }}
               whileHover={{ y: -6, scale: 1.01 }}
-              className="rounded-[1.8rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02))] px-6 py-6 text-base leading-8 text-white/78 backdrop-blur"
+              className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.07),rgba(255,255,255,0.02))] px-6 py-6 backdrop-blur"
             >
-              {item}
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.12),transparent_38%)] opacity-70" />
+              <div className="metal-sheen absolute inset-0 opacity-30 group-hover:opacity-70" />
+              <div className="relative z-10">
+                <p className="text-xs uppercase tracking-[0.28em] text-[#d3d9e3]">
+                  {panel.title}
+                </p>
+                <div className="mt-4 space-y-4">
+                  {panel.lines.map((line) => (
+                    <p key={line} className="text-lg leading-8 text-white/82">
+                      {line}
+                    </p>
+                  ))}
+                </div>
+              </div>
             </Motion.motion.div>
           ))}
         </div>
