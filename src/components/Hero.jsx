@@ -88,7 +88,7 @@ export default function HeroSection() {
           </Motion.motion.div>
         </Motion.motion.div>
 
-        <div className="grid gap-4">
+        <div className="grid gap-4 pt-24 lg:pt-40">
           {PROFILE.headline.map((item, index) => (
             <Motion.motion.div
               key={item}

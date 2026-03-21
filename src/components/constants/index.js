@@ -8,17 +8,17 @@ export const NAV_LINKS = [
 
 export const PROFILE = {
   name: "Jagruthi Pulumati",
-  role: "AI/ML, full-stack, and backend-focused developer building practical products with strong frontend execution.",
+  role: "AI/ML, full-stack, and backend-focused developer building practical products across web, data, and real-world client work.",
   summary:
-    "I work across machine learning, full-stack applications, and backend fundamentals, while still caring a lot about how products feel in the hands of real users. My recent work spans ML prediction projects, data-driven health analysis, caption tooling, and web applications with clean interfaces.",
+    "I work across AI/ML, backend systems, and full-stack products, while still caring about clean user experience and polished interfaces. My recent work spans machine learning apps, data analytics, live client projects, and modern web platforms built with practical engineering in mind.",
   headline: [
-    "Frontend and UI/UX Developer Intern at Artizence",
-    "Tech stack: React, JavaScript, Tailwind, SQL, Python, TensorFlow",
-    "Projects across ML prediction, health data analysis, caption tooling, and client websites",
+    "Currently interning with Hebrix in AI/ML",
+    "Ex-Intern: Frontend and UI/UX Developer at Artizence",
+    "Freelance client work delivered through real-world web projects",
   ],
   location: "India",
   email: "jagruthi.pulumati2024@nst.rishihood.edu.in",
-  resumeUrl: "https://pdf.ac/3I9eEF",
+  resumeUrl: "https://drive.google.com/file/d/1zRzbcq3hcZHA3C4jfS6L7tGiDxSJsl-l/view?usp=drive_link",
   socials: [
     {
       label: "GitHub",
@@ -32,7 +32,7 @@ export const PROFILE = {
     },
     {
       label: "Resume",
-      href: "https://pdf.ac/3I9eEF",
+      href: "https://drive.google.com/file/d/1zRzbcq3hcZHA3C4jfS6L7tGiDxSJsl-l/view?usp=drive_link",
       icon: "resume",
     },
     {
@@ -45,20 +45,29 @@ export const PROFILE = {
 
 export const ABOUT = {
   intro:
-    "My work is centered on AI/ML, full-stack applications, and backend understanding, with a strong frontend layer when the product needs it.",
+    "My work is centered on AI/ML, full-stack development, and backend systems, with a strong frontend layer when the product needs it.",
   body: [
     "At Artizence, I worked across UI design and frontend delivery, helping translate business requirements into responsive React interfaces with cleaner data presentation and better usability.",
-    "My tech stack mainly includes React, JavaScript, and Tailwind for frontend, SQL and basic APIs for backend understanding, and Python with TensorFlow for machine learning projects.",
-    "I want the portfolio to reflect the actual work in my resume: ML projects, full-stack builds, backend-oriented experiments, and applied product work rather than generic showcase copy.",
+    "I am also currently interning with Hebrix in AI/ML, where my focus is closer to machine learning, data-oriented workflows, and practical problem solving.",
+    "Alongside internships, I have worked with freelance clients on real-world websites, which is important to me because it reflects shipping work for actual users and business needs.",
   ],
   stats: [
     { label: "Focus", value: "AI/ML, Full-Stack, Backend" },
-    { label: "Frontend", value: "React, JavaScript, Tailwind" },
-    { label: "ML Stack", value: "Python, TensorFlow, Data Workflows" },
+    { label: "Core Stack", value: "React, TypeScript, Node, Express" },
+    { label: "Data + ML", value: "Python, Data Analytics, AI/ML" },
   ],
 };
 
 export const EXPERIENCE = [
+  {
+    title: "AI/ML Intern",
+    company: "Hebrix",
+    period: "Current",
+    points: [
+      "Currently working in AI/ML with a focus on applied machine learning workflows, data understanding, and practical experimentation.",
+      "Building stronger hands-on depth in analytics, model-driven thinking, and real problem framing through internship work.",
+    ],
+  },
   {
     title: "Frontend and UI/UX Developer Intern",
     company: "Artizence",
@@ -67,6 +76,16 @@ export const EXPERIENCE = [
       "Completed a UI-focused internship centered on wireframing, prototyping, and interaction design, then extended into frontend development work.",
       "Built React and Tailwind interfaces backed by REST APIs, improving responsiveness, browser consistency, and overall usability.",
       "Turned raw business data into clearer product experiences by structuring information architecture and simplifying user-facing flows.",
+    ],
+  },
+  {
+    title: "Freelance Developer",
+    company: "Client Projects",
+    period: "2025 - Present",
+    points: [
+      "Delivered real-world client websites with attention to usability, branding, and production-ready frontend implementation.",
+      "Worked directly on business-facing requirements, polishing interfaces and shipping experiences that supported actual client goals.",
+      "The Nail Artist Website is one of the strongest examples of this freelance work and is intentionally featured in the portfolio.",
     ],
   },
 ];
@@ -90,117 +109,33 @@ export const EDUCATION = [
 ];
 
 export const TECHNOLOGIES = [
-  "Python",
-  "TensorFlow",
   "React",
   "JavaScript",
-  "Tailwind CSS",
-  "SQL",
-  "Basic APIs",
+  "TypeScript",
   "Node.js",
-  "REST APIs",
-  "Postman",
-  "Framer Motion",
-  "HTML",
-  "CSS",
-  "Git",
-  "Machine Learning",
+  "Express.js",
+  "MongoDB",
+  "Postgres",
+  "Tailwind",
+  "SQL",
+  "Python",
   "Data Analysis",
+  "AI/ML",
 ];
 
 export const PROJECTS = [
   {
-    title: "NearGlow",
-    period: "November 2025",
-    tagline: "Glow-on-demand discovery and booking experience for beauty services.",
-    description:
-      "Designed and built a responsive interface for finding salons by location, rating, and service type, making discovery and comparison faster for users who need quick decisions.",
-    highlights: [
-      "Structured the booking journey to reduce search friction and improve service comparison.",
-      "Focused the UX on mobile-friendly discovery, clarity, and a cleaner decision path.",
-    ],
-    technologies: ["React", "Tailwind CSS", "Responsive UI", "Booking UX"],
-    links: [
-      {
-        label: "Resume Feature",
-        href: "https://pdf.ac/3I9eEF",
-        icon: "external",
-      },
-    ],
-  },
-  {
-    title: "Whisprite",
-    period: "September 2025",
-    tagline: "Caption generation and video rendering workflow powered by Whisper and Remotion.",
-    description:
-      "Built a full-stack captioning app that accepts MP4 uploads, generates speech-to-text captions, supports style presets, and exports rendered videos through an automated workflow.",
-    highlights: [
-      "Reduced manual caption editing by automating generation and render steps.",
-      "Designed the review flow around caption accuracy, styling flexibility, and a cleaner export experience.",
-    ],
-    technologies: ["React", "JavaScript", "Remotion", "Whisper", "Video Tooling"],
-    links: [
-      {
-        label: "GitHub",
-        href: "https://github.com/Jag2007/Whisprite",
-        icon: "github",
-      },
-      {
-        label: "Live Demo",
-        href: "https://simora-caption-generator.vercel.app",
-        icon: "external",
-      },
-    ],
-  },
-  {
-    title: "Property Price Prediction",
-    period: "2026",
-    tagline: "Machine learning system for estimating property prices from listing and location data.",
-    description:
-      "Built an ML project that applies classical machine learning techniques to historical listing data and location attributes to predict property values and study the drivers behind market pricing.",
-    highlights: [
-      "Worked on data preparation, feature-driven prediction, and analysis of market factors that influence price movement.",
-      "Used the project to strengthen practical ML workflow skills beyond model training alone.",
-    ],
-    technologies: ["Python", "Machine Learning", "Jupyter Notebook", "Data Analysis"],
-    links: [
-      {
-        label: "GitHub",
-        href: "https://github.com/Jag2007/property-price-prediction",
-        icon: "github",
-      },
-    ],
-  },
-  {
-    title: "Pregnant Women COVID-19 Analysis",
-    period: "2026",
-    tagline: "Data-led health analysis project focused on pregnant women and COVID-19 outcomes.",
-    description:
-      "Worked on a project analyzing COVID-19 data related to pregnant women, focusing on organizing data, extracting insights, and studying health-related patterns through a structured analytical workflow.",
-    highlights: [
-      "Built experience handling domain-specific datasets, interpretation, and insight extraction.",
-      "Extended my data analysis work toward healthcare-oriented problem framing and reporting.",
-    ],
-    technologies: ["Python", "Data Analysis", "Research Workflow", "Health Data"],
-    links: [
-      {
-        label: "GitHub",
-        href: "https://github.com/Jag2007/SectionC_Group6_Pregnant_Women_COVID19",
-        icon: "github",
-      },
-    ],
-  },
-  {
     title: "Nail Artist Website",
     period: "June 2025",
-    tagline: "Fast client-facing portfolio and inquiry flow for a nail artist brand.",
+    tagline: "Freelance project and real-world client website for a beauty brand.",
     description:
       "Created a responsive portfolio platform for a beauty business with polished navigation, service presentation, and lightweight inquiry flows tailored for conversion.",
     highlights: [
-      "Integrated API-driven interaction patterns and tested flows with Postman during development.",
+      "Built for a real client requirement rather than as a demo-only project.",
       "Balanced visual branding with straightforward content structure so the site feels premium without slowing users down.",
+      "Integrated API-driven interaction patterns and tested flows with Postman during development.",
     ],
-    technologies: ["React", "Tailwind CSS", "REST APIs", "Postman", "WhatsApp API"],
+    technologies: ["React", "Tailwind", "REST APIs", "Postman", "Freelance Project"],
     links: [
       {
         label: "GitHub",
@@ -213,9 +148,72 @@ export const PROJECTS = [
         icon: "external",
       },
       {
-        label: "Catalog Demo",
+        label: "Live Demo",
         href: "https://getnailedbyaish-catalog.vercel.app",
         icon: "external",
+      },
+    ],
+  },
+  {
+    title: "NearGlow",
+    period: "November 2025",
+    tagline: "Glow-on-demand discovery and booking experience for beauty services.",
+    description:
+      "Designed and built a responsive interface for finding salons by location, rating, and service type, making discovery and comparison faster for users who need quick decisions.",
+    highlights: [
+      "Structured the booking journey to reduce search friction and improve service comparison.",
+      "Focused the UX on mobile-friendly discovery, clarity, and a cleaner decision path.",
+      "Shipped as a live project with an actual deployed experience.",
+    ],
+    technologies: ["React", "Tailwind", "Responsive UI", "Booking UX"],
+    links: [
+      {
+        label: "Live Demo",
+        href: "https://near-glow.vercel.app/",
+        icon: "external",
+      },
+    ],
+  },
+  {
+    title: "Property Price Prediction",
+    period: "2026",
+    tagline: "Machine learning system for estimating property prices from listing and location data.",
+    description:
+      "Built an ML project that applies machine learning techniques to historical listing data and location attributes to predict property values and study the drivers behind market pricing.",
+    highlights: [
+      "Worked on data preparation, feature-driven prediction, and analysis of market factors that influence price movement.",
+      "Deployed the project as an interactive Streamlit application for direct exploration.",
+    ],
+    technologies: ["Python", "Machine Learning", "Streamlit", "Data Analytics"],
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/Jag2007/property-price-prediction",
+        icon: "github",
+      },
+      {
+        label: "Live Demo",
+        href: "https://property-price-prediction-real-estate.streamlit.app/",
+        icon: "external",
+      },
+    ],
+  },
+  {
+    title: "Pregnant Women COVID-19 Analysis",
+    period: "2026",
+    tagline: "Data-led health analysis project focused on pregnant women and COVID-19 outcomes.",
+    description:
+      "Worked on a data analytics project around COVID-19 outcomes related to pregnant women, focusing on structuring data, extracting insights, and studying health-related patterns.",
+    highlights: [
+      "Built experience handling domain-specific datasets, interpretation, and insight extraction.",
+      "Strengthened data analytics and reporting skills through healthcare-oriented problem framing.",
+    ],
+    technologies: ["Python", "Data Analytics", "Research Workflow", "Health Data"],
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/Jag2007/SectionC_Group6_Pregnant_Women_COVID19",
+        icon: "github",
       },
     ],
   },

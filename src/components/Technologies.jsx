@@ -25,9 +25,9 @@ const Technologies = () => {
             The stack I actually use across frontend, backend basics, and ML work.
           </h2>
           <p className="max-w-xl text-sm leading-7 text-white/60 sm:text-base">
-            React, JavaScript, and Tailwind are my main frontend tools. For
-            backend understanding I work with SQL and basic APIs, and for ML
-            projects I use Python with TensorFlow.
+            React, JavaScript, TypeScript, Node.js, Express.js, MongoDB,
+            Postgres, Tailwind, SQL, Python, Data Analytics, and AI/ML are the
+            main technologies I want highlighted in this portfolio.
           </p>
         </div>
 
@@ -37,7 +37,7 @@ const Technologies = () => {
             Highlighted Stack
           </p>
           <p className="mt-3 text-base leading-8 text-white/78 sm:text-lg">
-            My tech stack mainly includes <span className="font-semibold text-white">React</span>, <span className="font-semibold text-white">JavaScript</span>, and <span className="font-semibold text-white">Tailwind</span> for frontend, <span className="font-semibold text-white">SQL</span> and <span className="font-semibold text-white">basic APIs</span> for backend understanding, and <span className="font-semibold text-white">Python</span> with <span className="font-semibold text-white">TensorFlow</span> for machine learning projects.
+            My main stack includes <span className="font-semibold text-white">React</span>, <span className="font-semibold text-white">JavaScript</span>, <span className="font-semibold text-white">TypeScript</span>, <span className="font-semibold text-white">Node.js</span>, <span className="font-semibold text-white">Express.js</span>, <span className="font-semibold text-white">MongoDB</span>, <span className="font-semibold text-white">Postgres</span>, <span className="font-semibold text-white">Tailwind</span>, <span className="font-semibold text-white">SQL</span>, <span className="font-semibold text-white">Python</span>, <span className="font-semibold text-white">Data Analytics</span>, and <span className="font-semibold text-white">AI/ML</span>.
           </p>
         </div>
 
