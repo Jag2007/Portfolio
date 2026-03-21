@@ -120,6 +120,27 @@ export const EDUCATION = [
   },
 ];
 
+export const EXTRA_CURRICULARS = [
+  {
+    title: "Core Committee",
+    meta: "Neutron 2.0 Fest & Damru 2.0",
+    detail:
+      "Handled the department of decor for Neutron 2.0 and Damru 2.0, contributing to event planning, execution, and on-ground coordination.",
+  },
+  {
+    title: "4th Place - Hacker Hunt",
+    meta: "University-Level Competition",
+    detail:
+      "Placed 4th in Hacker Hunt, a university-level decoding and innovation competition focused on problem solving and creative technical thinking.",
+  },
+  {
+    title: "Participant - Girl Hackathon 2025",
+    meta: "Google",
+    detail:
+      "Participated in Google’s Girl Hackathon 2025, a program focused on empowering women in tech through problem solving, collaboration, and innovation.",
+  },
+];
+
 export const TECHNOLOGIES = [
   "React",
   "JavaScript",
