@@ -215,11 +215,10 @@ export const PROJECTS = [
     period: "April 2026",
     tagline: "Agentic AI crisis intelligence system for emergency transcript analysis.",
     description:
-      "Built an AI-driven crisis intelligence platform that analyzes emergency transcripts, prioritizes incidents, and presents explainable insights through an interactive dashboard.",
+      "Built an AI platform that analyzes emergency transcripts, prioritizes incidents, and surfaces explainable crisis insights.",
     highlights: [
-      "Developed scalable REST APIs and an ML-powered pipeline for deduplication and priority scoring.",
-      "Integrated LLM-based reasoning to support clearer incident triage and explainable recommendations.",
-      "Shipped a live demo with a dashboard-focused experience for reviewing crisis signals quickly.",
+      "Developed REST APIs and an ML pipeline for deduplication and priority scoring.",
+      "Integrated LLM reasoning into a dashboard for faster incident triage.",
     ],
     technologies: ["Agentic AI", "LLMs", "REST APIs", "Machine Learning", "React"],
     links: [
@@ -240,11 +239,10 @@ export const PROJECTS = [
     period: "March 2026",
     tagline: "Hybrid knowledge graph and semantic retrieval system for multi-hop document Q&A.",
     description:
-      "Built a question-answering system over unstructured PDFs that combines graph reasoning, embeddings, and keyword search to answer queries beyond simple vector retrieval.",
+      "Built a PDF question-answering system that combines graph reasoning, embeddings, and keyword search.",
     highlights: [
-      "Designed an entity-relationship extraction pipeline for document understanding and graph-based reasoning.",
-      "Combined graph traversal, semantic embeddings, and keyword search to benchmark and improve answer quality.",
-      "Focused on multi-hop retrieval behavior where relationships between concepts matter as much as raw similarity.",
+      "Designed an entity-relationship extraction pipeline for graph-based document understanding.",
+      "Combined graph traversal and semantic retrieval to improve multi-hop answer quality.",
     ],
     technologies: ["Knowledge Graphs", "Embeddings", "Semantic Search", "Python", "LLMs"],
     links: [
@@ -265,11 +263,10 @@ export const PROJECTS = [
     period: "February 2026",
     tagline: "Agentic ML system for property price prediction and real estate intelligence.",
     description:
-      "Built a multi-agent ML system for property price prediction using regression, ensemble models, adaptive model selection, and feedback loops for better prediction workflows.",
+      "Built a multi-agent ML system for property price prediction with regression, ensemble models, and adaptive evaluation.",
     highlights: [
-      "Orchestrated LangGraph agents for adaptive model selection, feature engineering, and evaluation across prediction and classification tasks.",
-      "Implemented preprocessing pipelines and self-correcting feedback loops to improve model accuracy and analysis quality.",
-      "Connected model outputs to a deployed product experience for exploring real-estate price intelligence.",
+      "Orchestrated LangGraph agents for feature engineering, model selection, and evaluation.",
+      "Implemented preprocessing and feedback loops to improve prediction workflows.",
     ],
     technologies: ["Python", "LangGraph", "Machine Learning", "Scikit-learn", "Regression"],
     links: [
@@ -290,11 +287,10 @@ export const PROJECTS = [
     period: "June 2025",
     tagline: "Freelance project and real-world client website for a beauty brand.",
     description:
-      "Created a responsive portfolio platform for a beauty business with polished navigation, service presentation, and lightweight inquiry flows tailored for conversion.",
+      "Created a responsive client website for a beauty brand with polished service presentation and inquiry flows.",
     highlights: [
       "Built for a real client requirement rather than as a demo-only project.",
-      "Balanced visual branding with straightforward content structure so the site feels premium without slowing users down.",
-      "Integrated API-driven interaction patterns and tested flows with Postman during development.",
+      "Balanced premium visual branding with lightweight, conversion-focused navigation.",
     ],
     technologies: ["React", "Tailwind", "REST APIs", "Postman", "Freelance Project"],
     links: [
@@ -320,11 +316,10 @@ export const PROJECTS = [
     period: "November 2025",
     tagline: "Glow-on-demand discovery and booking experience for beauty services.",
     description:
-      "Designed and built a responsive interface for finding salons by location, rating, and service type, making discovery and comparison faster for users who need quick decisions.",
+      "Designed a responsive discovery and booking interface for comparing salons by location, rating, and service type.",
     highlights: [
       "Structured the booking journey to reduce search friction and improve service comparison.",
-      "Focused the UX on mobile-friendly discovery, clarity, and a cleaner decision path.",
-      "Shipped as a live project with an actual deployed experience.",
+      "Shipped a live mobile-friendly experience with a cleaner decision path.",
     ],
     technologies: ["React", "Tailwind", "Responsive UI", "Booking UX"],
     links: [
@@ -345,7 +340,7 @@ export const PROJECTS = [
     period: "2026",
     tagline: "Data-led health analysis project focused on pregnant women and COVID-19 outcomes.",
     description:
-      "Worked on a data analytics project around COVID-19 outcomes related to pregnant women, focusing on structuring data, extracting insights, and studying health-related patterns.",
+      "Analyzed COVID-19 outcome data related to pregnant women, focusing on structure, insights, and health patterns.",
     highlights: [
       "Built experience handling domain-specific datasets, interpretation, and insight extraction.",
       "Strengthened data analytics and reporting skills through healthcare-oriented problem framing.",
