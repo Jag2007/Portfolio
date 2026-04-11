@@ -1,14 +1,15 @@
 import * as Motion from "framer-motion";
-import { Code2, FileText, Github, Linkedin, Mail } from "lucide-react";
+import { FileText, Github, Linkedin, Mail } from "lucide-react";
 import { PROFILE } from "./constants";
 
 const SOCIAL_ICONS = {
   github: Github,
   linkedin: Linkedin,
-  code: Code2,
   resume: FileText,
   email: Mail,
 };
+
+const HERO_SOCIAL_LABELS = new Set(["GitHub", "LinkedIn", "Resume", "Email"]);
 
 function SocialIcon({ href, icon, label }) {
   const Icon = SOCIAL_ICONS[icon];
@@ -87,7 +88,7 @@ export default function HeroSection() {
           </Motion.motion.p>
 
           <Motion.motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-3">
-            {PROFILE.socials.map((item) => (
+            {PROFILE.socials.filter((item) => HERO_SOCIAL_LABELS.has(item.label)).map((item) => (
               <SocialIcon key={item.label} {...item} />
             ))}
           </Motion.motion.div>
