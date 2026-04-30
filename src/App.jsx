@@ -7,6 +7,7 @@ import Technologies from "./components/Technologies";
 import AboutMe from "./components/AboutMe";
 import Experience from "./components/Experience";
 import SplashCursor from "./components/SplashCursor";
+import Achievements from "./components/Achievements";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Hero />
         <AboutMe />
         <Technologies />
+        <Achievements />
         <Experience />
         <Projects />
         <Contact />

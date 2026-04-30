@@ -1,6 +1,7 @@
 export const NAV_LINKS = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },
+  { id: "achievements", label: "Achievements" },
   { id: "experience", label: "Experience" },
   { id: "projects", label: "Projects" },
   { id: "contact", label: "Contact" },
@@ -154,6 +155,28 @@ export const EXTRA_CURRICULARS = [
     meta: "Google",
     detail:
       "Participated in Google’s Girl Hackathon 2025, a program focused on empowering women in tech through problem solving, collaboration, and innovation.",
+  },
+];
+
+export const ACHIEVEMENTS = [
+  {
+    title: "270+ LeetCode Problems",
+    meta: "Rating: 1394",
+    detail:
+      "Consistent data structures and algorithms practice across arrays, strings, dynamic programming, graphs, and problem-solving patterns.",
+    href: "https://leetcode.com/u/jagruthi_pulumati/",
+  },
+  {
+    title: "4th Place - Hacker Hunt",
+    meta: "University-Level Competition",
+    detail:
+      "Placed 4th in a decoding and innovation competition focused on fast problem solving, logic, and creative technical thinking.",
+  },
+  {
+    title: "Google Girl Hackathon 2025",
+    meta: "Participant",
+    detail:
+      "Participated in Google's women-in-tech hackathon program, working through collaborative problem solving and innovation challenges.",
   },
 ];
 
