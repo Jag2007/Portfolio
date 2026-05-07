@@ -211,61 +211,6 @@ export const TECHNOLOGIES = [
 
 export const PROJECTS = [
   {
-    title: "Nail Artist Website",
-    period: "June 2025",
-    tagline: "Freelance project and real-world client website for a beauty brand.",
-    description:
-      "Created a responsive portfolio platform for a beauty business with polished navigation, service presentation, and lightweight inquiry flows tailored for conversion.",
-    highlights: [
-      "Built for a real client requirement rather than as a demo-only project.",
-      "Balanced visual branding with straightforward content structure so the site feels premium without slowing users down.",
-      "Integrated API-driven interaction patterns and tested flows with Postman during development.",
-    ],
-    technologies: ["React", "Tailwind", "REST APIs", "Postman", "Freelance Project"],
-    links: [
-      {
-        label: "GitHub",
-        href: "https://github.com/JagruthiPulumati/nailedbyaish",
-        icon: "github",
-      },
-      {
-        label: "Live Demo",
-        href: "https://nailedbyaish.vercel.app/",
-        icon: "external",
-      },
-      {
-        label: "Catalog Demo",
-        href: "https://getnailedbyaish-catalog.vercel.app",
-        icon: "external",
-      },
-    ],
-  },
-  {
-    title: "NearGlow",
-    period: "November 2025",
-    tagline: "Glow-on-demand discovery and booking experience for beauty services.",
-    description:
-      "Designed and built a responsive interface for finding salons by location, rating, and service type, making discovery and comparison faster for users who need quick decisions.",
-    highlights: [
-      "Structured the booking journey to reduce search friction and improve service comparison.",
-      "Focused the UX on mobile-friendly discovery, clarity, and a cleaner decision path.",
-      "Shipped as a live project with an actual deployed experience.",
-    ],
-    technologies: ["React", "Tailwind", "Responsive UI", "Booking UX"],
-    links: [
-      {
-        label: "GitHub",
-        href: "https://github.com/JagruthiPulumati/NearGlow",
-        icon: "github",
-      },
-      {
-        label: "Live Demo",
-        href: "https://nearglow.vercel.app/",
-        icon: "external",
-      },
-    ],
-  },
-  {
     title: "CrisisWeave",
     period: "April 2026",
     tagline: "Agentic AI crisis intelligence system for emergency transcript analysis.",
@@ -336,6 +281,61 @@ export const PROJECTS = [
       {
         label: "Live Demo",
         href: "https://real-estate-price-intelligence.vercel.app/",
+        icon: "external",
+      },
+    ],
+  },
+  {
+    title: "Nail Artist Website",
+    period: "June 2025",
+    tagline: "Freelance project and real-world client website for a beauty brand.",
+    description:
+      "Created a responsive portfolio platform for a beauty business with polished navigation, service presentation, and lightweight inquiry flows tailored for conversion.",
+    highlights: [
+      "Built for a real client requirement rather than as a demo-only project.",
+      "Balanced visual branding with straightforward content structure so the site feels premium without slowing users down.",
+      "Integrated API-driven interaction patterns and tested flows with Postman during development.",
+    ],
+    technologies: ["React", "Tailwind", "REST APIs", "Postman", "Freelance Project"],
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/JagruthiPulumati/nailedbyaish",
+        icon: "github",
+      },
+      {
+        label: "Live Demo",
+        href: "https://nailedbyaish.vercel.app/",
+        icon: "external",
+      },
+      {
+        label: "Catalog Demo",
+        href: "https://getnailedbyaish-catalog.vercel.app",
+        icon: "external",
+      },
+    ],
+  },
+  {
+    title: "NearGlow",
+    period: "November 2025",
+    tagline: "Glow-on-demand discovery and booking experience for beauty services.",
+    description:
+      "Designed and built a responsive interface for finding salons by location, rating, and service type, making discovery and comparison faster for users who need quick decisions.",
+    highlights: [
+      "Structured the booking journey to reduce search friction and improve service comparison.",
+      "Focused the UX on mobile-friendly discovery, clarity, and a cleaner decision path.",
+      "Shipped as a live project with an actual deployed experience.",
+    ],
+    technologies: ["React", "Tailwind", "Responsive UI", "Booking UX"],
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/JagruthiPulumati/NearGlow",
+        icon: "github",
+      },
+      {
+        label: "Live Demo",
+        href: "https://nearglow.vercel.app/",
         icon: "external",
       },
     ],
