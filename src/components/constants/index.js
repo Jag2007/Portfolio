@@ -65,7 +65,7 @@ export const PROFILE = {
     },
     {
       label: "Email",
-      href: "mailto:jagruthi.pulumati2024@nst.rishihood.edu.in",
+      href: "mailto:jagruthi-pulumati2024@nst.rishihood.edu.in",
       icon: "email",
     },
   ],
