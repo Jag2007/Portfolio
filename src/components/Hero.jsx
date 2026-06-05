@@ -1,10 +1,11 @@
 import * as Motion from "framer-motion";
-import { FileText, Github, Linkedin, Mail } from "lucide-react";
+import { Code2, FileText, Github, Linkedin, Mail } from "lucide-react";
 import { PROFILE } from "./constants";
 
 const SOCIAL_ICONS = {
   github: Github,
   linkedin: Linkedin,
+  code: Code2,
   resume: FileText,
   email: Mail,
 };

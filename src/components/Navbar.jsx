@@ -22,7 +22,7 @@ const Navbar = () => {
           JP
         </button>
 
-        <div className="hidden items-center gap-5 md:flex">
+        <div className="hidden items-center gap-5 xl:flex">
           {NAV_LINKS.map((section) => (
             <button
               key={section.id}
@@ -35,7 +35,7 @@ const Navbar = () => {
         </div>
 
         <button
-          className="rounded-full border border-white/10 p-2 text-white md:hidden"
+          className="rounded-full border border-white/10 p-2 text-white xl:hidden"
           onClick={() => setMenuOpen((open) => !open)}
           aria-label={menuOpen ? "Close menu" : "Open menu"}
         >
@@ -44,7 +44,7 @@ const Navbar = () => {
       </div>
 
       {menuOpen && (
-        <div className="mx-auto mt-3 max-w-6xl rounded-[1.5rem] border border-white/10 bg-[#090a0d]/95 p-4 shadow-[0_20px_40px_rgba(0,0,0,0.35)] backdrop-blur md:hidden">
+        <div className="mx-auto mt-3 max-w-6xl rounded-[1.5rem] border border-white/10 bg-[#090a0d]/95 p-4 shadow-[0_20px_40px_rgba(0,0,0,0.35)] backdrop-blur xl:hidden">
           <div className="flex flex-col gap-3">
             {NAV_LINKS.map((section) => (
               <button

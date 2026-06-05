@@ -8,14 +8,14 @@ export const NAV_LINKS = [
 
 export const PROFILE = {
   name: "Jagruthi Pulumati",
-  role: "AI/ML, full-stack, and backend-focused developer building practical products across web, data, and real-world client work.",
+  role: "AI/ML engineer and full-stack developer building agentic AI, knowledge graph, predictive modeling, and client-facing web products.",
   summary:
-    "I work across AI/ML, backend systems, and full-stack products, while still caring about clean user experience and polished interfaces. My recent work spans machine learning apps, data analytics, live client projects, and modern web platforms built with practical engineering in mind.",
+    "I work across AI/ML, backend systems, and full-stack products, while still caring about clean user experience and polished interfaces. My recent work spans LLM retrieval pipelines, LangGraph agents, knowledge graph Q&A, predictive modeling, live client projects, and modern web platforms built with practical engineering in mind.",
   heroPanels: [
     {
       title: "Internships And Experience",
       lines: [
-        "Currently interning with Hebrix in AI/ML",
+        "Currently interning with Hebbrix in AI/ML",
         "Ex-Intern: Frontend and UI/UX Developer at Artizence",
         "Freelance client work delivered through real-world web projects",
       ],
@@ -23,24 +23,39 @@ export const PROFILE = {
     {
       title: "Tech Stack And Current Interests",
       lines: [
-        "React, JavaScript, TypeScript, Node.js, Express.js, MongoDB, Postgres, Tailwind, SQL, Python, Data Analytics, AI/ML",
-        "Current interests: AI/ML systems, backend engineering, full-stack product development, and real-world client platforms",
+        "Python, Scikit-learn, LangChain, LangGraph, React, TypeScript, Node.js, Express.js, MongoDB, Postgres, Tailwind, SQL",
+        "Current interests: agentic AI systems, retrieval pipelines, knowledge graphs, backend engineering, and full-stack product development",
       ],
     },
   ],
   location: "India",
-  email: "jagruthi.pulumati2024@nst.rishihood.edu.in",
+  email: "jagruthi-pulumati2024@nst.rishihood.edu.in",
   resumeUrl: "https://drive.google.com/file/d/1zRzbcq3hcZHA3C4jfS6L7tGiDxSJsl-l/view?usp=drive_link",
   socials: [
     {
       label: "GitHub",
-      href: "https://github.com/Jag2007",
+      href: "https://github.com/JagruthiPulumati",
       icon: "github",
     },
     {
       label: "LinkedIn",
-      href: "https://www.linkedin.com/in/jagruthi-pulumati-087b69305/",
+      href: "https://www.linkedin.com/in/jagruthi-pulumati/",
       icon: "linkedin",
+    },
+    {
+      label: "LeetCode",
+      href: "https://leetcode.com/u/jagruthi_pulumati/",
+      icon: "code",
+    },
+    {
+      label: "HackerRank",
+      href: "https://www.hackerrank.com/profile/jagruthi_puluma1",
+      icon: "code",
+    },
+    {
+      label: "Codeforces",
+      href: "https://codeforces.com/profile/Jagruthi_Pulumati",
+      icon: "code",
     },
     {
       label: "Resume",
@@ -57,27 +72,28 @@ export const PROFILE = {
 
 export const ABOUT = {
   intro:
-    "My work is centered on AI/ML, full-stack development, and backend systems, with a strong frontend layer when the product needs it.",
+    "My work is centered on AI/ML, agentic systems, full-stack development, and backend systems, with a strong frontend layer when the product needs it.",
   body: [
+    "At Hebbrix, I work on AI/ML workflows around LLM retrieval, embedding-based search, indexing quality, API integrations, and production reliability for AI services.",
     "At Artizence, I worked across UI design and frontend delivery, helping translate business requirements into responsive React interfaces with cleaner data presentation and better usability.",
-    "I am also currently interning with Hebrix in AI/ML, where my focus is closer to machine learning, data-oriented workflows, and practical problem solving.",
     "Alongside internships, I have worked with freelance clients on real-world websites, which is important to me because it reflects shipping work for actual users and business needs.",
   ],
   stats: [
-    { label: "Focus", value: "AI/ML, Full-Stack, Backend" },
+    { label: "Focus", value: "Agentic AI, ML, Full-Stack" },
     { label: "Core Stack", value: "React, TypeScript, Node, Express" },
-    { label: "Data + ML", value: "Python, Data Analytics, AI/ML" },
+    { label: "AI + Data", value: "Python, LangGraph, Scikit-learn" },
   ],
 };
 
 export const EXPERIENCE = [
   {
     title: "AI/ML Intern",
-    company: "Hebrix",
-    period: "Current",
+    company: "Hebbrix",
+    period: "March 2026 - Present",
     points: [
-      "Currently working in AI/ML with a focus on applied machine learning workflows, data understanding, and practical experimentation.",
-      "Building stronger hands-on depth in analytics, model-driven thinking, and real problem framing through internship work.",
+      "Optimizing LLM-based retrieval pipelines, improving response time and reliability across embedding-based search workflows.",
+      "Designed and executed test cases for AI workflows, helping validate retrieval accuracy, indexing behavior, and production stability.",
+      "Debugged production AI services, improved embedding and indexing strategies, and maintained API integrations for AI modules.",
     ],
   },
   {
@@ -142,6 +158,13 @@ export const EXTRA_CURRICULARS = [
 ];
 
 export const TECHNOLOGIES = [
+  "Python",
+  "Scikit-learn",
+  "LangChain",
+  "LangGraph",
+  "Hugging Face",
+  "TensorFlow",
+  "LLMs",
   "React",
   "JavaScript",
   "TypeScript",
@@ -149,9 +172,16 @@ export const TECHNOLOGIES = [
   "Express.js",
   "MongoDB",
   "Postgres",
+  "Firebase",
   "Tailwind",
+  "Next.js",
+  "Prisma ORM",
+  "Framer Motion",
   "SQL",
-  "Python",
+  "Docker",
+  "Postman",
+  "Power BI",
+  "Tableau",
   "Data Analysis",
   "AI/ML",
 ];
@@ -172,12 +202,12 @@ export const PROJECTS = [
     links: [
       {
         label: "GitHub",
-        href: "https://github.com/Jag2007/Getnailedbyaish",
+        href: "https://github.com/JagruthiPulumati/nailedbyaish",
         icon: "github",
       },
       {
         label: "Live Demo",
-        href: "https://getnailedbyaish.vercel.app",
+        href: "https://nailedbyaish.vercel.app/",
         icon: "external",
       },
       {
@@ -201,32 +231,88 @@ export const PROJECTS = [
     technologies: ["React", "Tailwind", "Responsive UI", "Booking UX"],
     links: [
       {
+        label: "GitHub",
+        href: "https://github.com/JagruthiPulumati/NearGlow",
+        icon: "github",
+      },
+      {
         label: "Live Demo",
-        href: "https://near-glow.vercel.app/",
+        href: "https://nearglow.vercel.app/",
         icon: "external",
       },
     ],
   },
   {
-    title: "Property Price Prediction",
-    period: "2026",
-    tagline: "Machine learning system for estimating property prices from listing and location data.",
+    title: "CrisisWeave",
+    period: "April 2026",
+    tagline: "Agentic AI crisis intelligence system for emergency transcript analysis.",
     description:
-      "Built an ML project that applies machine learning techniques to historical listing data and location attributes to predict property values and study the drivers behind market pricing.",
+      "Built an AI-driven crisis intelligence platform that analyzes emergency transcripts, prioritizes incidents, and presents explainable insights through an interactive dashboard.",
     highlights: [
-      "Worked on data preparation, feature-driven prediction, and analysis of market factors that influence price movement.",
-      "Deployed the project as an interactive Streamlit application for direct exploration.",
+      "Developed scalable REST APIs and an ML-powered pipeline for deduplication and priority scoring.",
+      "Integrated LLM-based reasoning to support clearer incident triage and explainable recommendations.",
+      "Shipped a live demo with a dashboard-focused experience for reviewing crisis signals quickly.",
     ],
-    technologies: ["Python", "Machine Learning", "Streamlit", "Data Analytics"],
+    technologies: ["Agentic AI", "LLMs", "REST APIs", "Machine Learning", "React"],
     links: [
       {
         label: "GitHub",
-        href: "https://github.com/Jag2007/property-price-prediction",
+        href: "https://github.com/JagruthiPulumati/CrisisWeave",
         icon: "github",
       },
       {
         label: "Live Demo",
-        href: "https://property-price-prediction-real-estate.streamlit.app/",
+        href: "https://crisis-weave.vercel.app/",
+        icon: "external",
+      },
+    ],
+  },
+  {
+    title: "Knowledge Graph Q&A System",
+    period: "March 2026",
+    tagline: "Hybrid knowledge graph and semantic retrieval system for multi-hop document Q&A.",
+    description:
+      "Built a question-answering system over unstructured PDFs that combines graph reasoning, embeddings, and keyword search to answer queries beyond simple vector retrieval.",
+    highlights: [
+      "Designed an entity-relationship extraction pipeline for document understanding and graph-based reasoning.",
+      "Combined graph traversal, semantic embeddings, and keyword search to benchmark and improve answer quality.",
+      "Focused on multi-hop retrieval behavior where relationships between concepts matter as much as raw similarity.",
+    ],
+    technologies: ["Knowledge Graphs", "Embeddings", "Semantic Search", "Python", "LLMs"],
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/JagruthiPulumati/KnowledgeGraph-QA",
+        icon: "github",
+      },
+      {
+        label: "Live Demo",
+        href: "https://knowledge-graph-qa.vercel.app/",
+        icon: "external",
+      },
+    ],
+  },
+  {
+    title: "Agentic AI Real Estate Price Intelligence System",
+    period: "February 2026",
+    tagline: "Agentic ML system for property price prediction and real estate intelligence.",
+    description:
+      "Built a multi-agent ML system for property price prediction using regression, ensemble models, adaptive model selection, and feedback loops for better prediction workflows.",
+    highlights: [
+      "Orchestrated LangGraph agents for adaptive model selection, feature engineering, and evaluation across prediction and classification tasks.",
+      "Implemented preprocessing pipelines and self-correcting feedback loops to improve model accuracy and analysis quality.",
+      "Connected model outputs to a deployed product experience for exploring real-estate price intelligence.",
+    ],
+    technologies: ["Python", "LangGraph", "Machine Learning", "Scikit-learn", "Regression"],
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/JagruthiPulumati/RealEstate-PriceIntelligence",
+        icon: "github",
+      },
+      {
+        label: "Live Demo",
+        href: "https://real-estate-price-intelligence.vercel.app/",
         icon: "external",
       },
     ],

@@ -1,10 +1,11 @@
-import { FileText, Github, Linkedin, Mail } from "lucide-react";
+import { Code2, FileText, Github, Linkedin, Mail } from "lucide-react";
 import * as Motion from "framer-motion";
 import { PROFILE } from "./constants";
 
 const CONTACT_ICONS = {
   github: Github,
   linkedin: Linkedin,
+  code: Code2,
   resume: FileText,
   email: Mail,
 };
@@ -28,9 +29,9 @@ const Contact = () => {
               Open to internships, collaborations, and strong product work.
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-8 text-white/65">
-              If you are building something that needs clean UI, reliable frontend
-              execution, or sharper user flows, reach out. Email is the fastest way
-              to get me.
+              If you are building something that needs AI/ML thinking, reliable
+              full-stack execution, backend integrations, or sharper user flows,
+              reach out. Email is the fastest way to get me.
             </p>
           </div>
           <a
