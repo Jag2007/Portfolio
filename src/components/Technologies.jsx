@@ -22,12 +22,12 @@ const Technologies = () => {
         </p>
         <div className="mt-4 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <h2 className="display-font text-3xl font-semibold text-white sm:text-4xl">
-            The stack I actually use across frontend, backend basics, and ML work.
+            The stack I use across AI agents, backend APIs, full-stack apps, and ML work.
           </h2>
           <p className="max-w-xl text-sm leading-7 text-white/60 sm:text-base">
-            React, JavaScript, TypeScript, Node.js, Express.js, MongoDB,
-            Postgres, Tailwind, SQL, Python, Data Analytics, and AI/ML are the
-            main technologies I want highlighted in this portfolio.
+            Python, LangGraph, LangChain, Scikit-learn, React, TypeScript,
+            Node.js, Express.js, MongoDB, Postgres, Tailwind, SQL, and API
+            testing are the technologies I want front and center.
           </p>
         </div>
 
@@ -37,7 +37,7 @@ const Technologies = () => {
             Highlighted Stack
           </p>
           <p className="mt-3 text-base leading-8 text-white/78 sm:text-lg">
-            My main stack includes <span className="font-semibold text-white">React</span>, <span className="font-semibold text-white">JavaScript</span>, <span className="font-semibold text-white">TypeScript</span>, <span className="font-semibold text-white">Node.js</span>, <span className="font-semibold text-white">Express.js</span>, <span className="font-semibold text-white">MongoDB</span>, <span className="font-semibold text-white">Postgres</span>, <span className="font-semibold text-white">Tailwind</span>, <span className="font-semibold text-white">SQL</span>, <span className="font-semibold text-white">Python</span>, <span className="font-semibold text-white">Data Analytics</span>, and <span className="font-semibold text-white">AI/ML</span>.
+            My main stack includes <span className="font-semibold text-white">Python</span>, <span className="font-semibold text-white">LangGraph</span>, <span className="font-semibold text-white">LangChain</span>, <span className="font-semibold text-white">Scikit-learn</span>, <span className="font-semibold text-white">React</span>, <span className="font-semibold text-white">TypeScript</span>, <span className="font-semibold text-white">Node.js</span>, <span className="font-semibold text-white">Express.js</span>, <span className="font-semibold text-white">MongoDB</span>, <span className="font-semibold text-white">Postgres</span>, <span className="font-semibold text-white">Tailwind</span>, <span className="font-semibold text-white">SQL</span>, and <span className="font-semibold text-white">Postman</span>.
           </p>
         </div>
 

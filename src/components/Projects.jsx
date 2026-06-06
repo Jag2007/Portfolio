@@ -27,9 +27,8 @@ const Projects = () => {
             </h2>
           </div>
           <p className="max-w-xl text-sm leading-7 text-white/60 sm:text-base">
-            This section includes the work that reflects my current direction
-            across AI/ML, full-stack development, backend learning, and shipped
-            client-facing products.
+            The first projects are intentionally AI-heavy, followed by shipped
+            full-stack and client-facing work that shows production thinking.
           </p>
         </Motion.motion.div>
 

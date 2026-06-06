@@ -31,7 +31,7 @@ export const PROFILE = {
   ],
   location: "India",
   email: "jagruthi-pulumati2024@nst.rishihood.edu.in",
-  resumeUrl: "https://drive.google.com/file/d/1zRzbcq3hcZHA3C4jfS6L7tGiDxSJsl-l/view?usp=drive_link",
+  resumeUrl: "/Jagruthi_Pulumati_Resume.pdf",
   socials: [
     {
       label: "GitHub",
@@ -60,7 +60,7 @@ export const PROFILE = {
     },
     {
       label: "Resume",
-      href: "https://drive.google.com/file/d/1zRzbcq3hcZHA3C4jfS6L7tGiDxSJsl-l/view?usp=drive_link",
+      href: "/Jagruthi_Pulumati_Resume.pdf",
       icon: "resume",
     },
     {
@@ -336,21 +336,21 @@ export const PROJECTS = [
     ],
   },
   {
-    title: "Pregnant Women COVID-19 Analysis",
+    title: "Student GitHub Portfolio Reviewer",
     period: "2026",
-    tagline: "Data-led health analysis project focused on pregnant women and COVID-19 outcomes.",
+    tagline: "LangGraph and FastAPI tool for reviewing GitHub portfolios.",
     description:
-      "Analyzed COVID-19 outcome data related to pregnant women, focusing on structure, insights, and health patterns.",
+      "Built an AI reviewer that extracts GitHub profile data and generates mentor-style feedback on recent repositories.",
     highlights: [
-      "Built experience handling domain-specific datasets, interpretation, and insight extraction.",
-      "Strengthened data analytics and reporting skills through healthcare-oriented problem framing.",
+      "Used LangGraph to route data extraction into an LLM-powered code mentor review flow.",
+      "Connected FastAPI, GitHub API requests, Groq/Llama, and a Streamlit UI for end-to-end analysis.",
     ],
-    technologies: ["Python", "Data Analytics", "Research Workflow", "Health Data"],
+    technologies: ["Python", "FastAPI", "LangGraph", "LangChain", "Streamlit"],
     links: [
       {
-        label: "GitHub",
-        href: "https://github.com/Jag2007/SectionC_Group6_Pregnant_Women_COVID19",
-        icon: "github",
+        label: "Live API",
+        href: "https://github-reviewer-2hor.onrender.com/",
+        icon: "external",
       },
     ],
   },
